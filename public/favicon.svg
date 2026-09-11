@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#f59e0b" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="112" fill="url(#bgGrad)" stroke="#334155" stroke-width="8" />
+
+  <!-- Subtle Inner Ring -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#334155" stroke-width="2" stroke-dasharray="8 8" opacity="0.4" />
+
+  <!-- Dual Transfer Arrows (representing Leasing Übernahme / Exchange) -->
+  <g opacity="0.95" filter="url(#glow)">
+    <!-- Upper Arrow (Clockwise) -->
+    <path d="M 170 145 A 135 135 0 0 1 360 175" fill="none" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round" />
+    <polygon points="360,150 385,188 340,195" fill="url(#goldGrad)" />
+
+    <!-- Lower Arrow (Counter-Clockwise) -->
+    <path d="M 342 367 A 135 135 0 0 1 152 337" fill="none" stroke="url(#goldGrad)" stroke-width="20" stroke-linecap="round" />
+    <polygon points="152,362 127,324 172,317" fill="url(#goldGrad)" />
+  </g>
+
+  <!-- Modern Aerodynamic Car Silhouette Centered -->
+  <g transform="translate(106, 176) scale(0.6)">
+    <!-- Car Body -->
+    <path d="M 40 160 
+             L 75 110 
+             C 105 75, 145 60, 205 55 
+             L 320 55 
+             C 375 55, 410 75, 445 115 
+             L 475 160 
+             C 495 170, 505 185, 505 205 
+             L 505 235 
+             C 505 245, 495 255, 485 255 
+             L 455 255 
+             C 445 220, 410 195, 370 195 
+             C 330 195, 295 220, 285 255 
+             L 175 255 
+             C 165 220, 130 195, 90 195 
+             C 50 195, 15 220, 5 255 
+             L -5 255 
+             C -15 255, -25 245, -25 235 
+             L -25 205 
+             C -25 185, -10 170, 40 160 Z" 
+          fill="url(#silverGrad)" />
+
+    <!-- Sleek Windows / Roof Line -->
+    <path d="M 100 135 
+             L 135 90 
+             C 155 75, 185 70, 235 68 
+             L 245 68 
+             L 245 135 Z" 
+          fill="#0f172a" opacity="0.88" />
+    <path d="M 265 68 
+             L 315 68 
+             C 355 70, 380 80, 405 105 
+             L 435 135 
+             L 265 135 Z" 
+          fill="#0f172a" opacity="0.88" />
+
+    <!-- Dynamic Speed Line Accent in Amber -->
+    <path d="M 30 165 L 470 165" stroke="url(#goldGrad)" stroke-width="8" stroke-linecap="round" />
+
+    <!-- Front & Rear Wheels -->
+    <circle cx="90" cy="255" r="42" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="10" />
+    <circle cx="90" cy="255" r="18" fill="url(#silverGrad)" />
+    
+    <circle cx="370" cy="255" r="42" fill="#0f172a" stroke="url(#goldGrad)" stroke-width="10" />
+    <circle cx="370" cy="255" r="18" fill="url(#silverGrad)" />
+
+    <!-- Headlight & Taillight -->
+    <path d="M 465 175 L 495 185 L 485 195 Z" fill="#38bdf8" />
+    <path d="M -15 175 L 15 185 L 5 195 Z" fill="#ef4444" />
+  </g>
+</svg>

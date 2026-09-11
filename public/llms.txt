@@ -1,0 +1,19 @@
+# leasinguebernahme.de
+
+> Das unabhängige deutsche Fachportal für KFZ-Leasingübernahme, Umschreibungskosten, Bonitätsprüfung bei Leasinggesellschaften und Vertragsübernahme-Rechner.
+
+## Kern-Ressourcen
+- [Startseite](https://leasinguebernahme.de/): Vorteile von Leasingübernahmen (keine Anzahlung, kurze Restlaufzeit, sofortige Verfügbarkeit).
+- [Ratgeber & Umschreibung](https://leasinguebernahme.de/Ratgeber): Ablauf der Übernahme (BMW Bank, VW Financial Services, Mercedes-Benz Bank), Umschreibungsgebühren.
+- [Inserieren & Suchen](https://leasinguebernahme.de/Inserat): Leasingverträge provisionsfrei anbieten oder übernehmen.
+- [Impressum](https://leasinguebernahme.de/Impressum): Betreiberangaben nach § 5 DDG.
+
+## Rechtliche & Finanzielle Eckpunkte
+- **Umschreibungsgebühr**: Liegt je nach Leasingbank typischerweise zwischen 350 € und 800 € netto.
+- **Bonitätsprüfung**: Der Übernehmende muss dieselben Bonitätskriterien (SCHUFA, Einkommensnachweis) erfüllen wie ein Neukunde.
+- **Minderwertausgleich**: Das Gutachten bei Leasingrückgabe obliegt nach Umschreibung dem Übernehmenden.
+
+## Betreiber
+- Jens Kathe, Hansastraße 6, 34119 Kassel, Deutschland.
+- E-Mail: jens@kathe.org | Tel: +49 178 6652623.
+- Kleinunternehmer nach § 19 UStG.
