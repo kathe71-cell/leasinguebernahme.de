@@ -86,8 +86,10 @@ function App() {
           
           {/* Legal Pages */}
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/Impressum" element={<Impressum />} />
           <Route path="/zimpressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/Datenschutz" element={<Datenschutz />} />
           <Route path="/zdatenschutz" element={<Datenschutz />} />
 
           {/* Brand Guides with aliases */}
