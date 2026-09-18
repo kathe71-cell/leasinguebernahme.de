@@ -1,10 +1,16 @@
 import React from "react";
 import { Building2, ShieldCheck } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function MarkeBMW() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="BMW Leasingübernahme | Umschreibungsgebühren & BMW Bank Ablauf"
+        description="Leitfaden zur BMW Leasingübernahme über die BMW Bank GmbH: Umschreibungsgebühren, Schufa-Voraussetzungen & Mindestlaufzeiten."
+        canonicalPath="/marke-bmw"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         <div className="border-b border-slate-200 pb-6">
           <span className="text-xs font-extrabold text-amber-600 uppercase tracking-widest">
@@ -26,11 +32,11 @@ export default function MarkeBMW() {
             BMW Bank GmbH Umschreibungsregeln
           </h2>
           <p>
-            Die <strong>BMW Bank GmbH</strong> ermöglicht die Vertragsübernahme für Privat- und Geschäftskunden. Die Bearbeitungsgebühr liegt in der Regel zwischen 400 € und 550 €.
+            Die <strong>BMW Bank GmbH</strong> ermöglicht die Vertragsübernahme für Privat- und Geschäftskunden. Die Bearbeitungsgebühr bitte direkt bei der BMW Bank für den konkreten Vertrag erfragen.
           </p>
           <ul className="list-disc list-inside space-y-1 font-medium text-slate-800 pt-2">
             <li>Gute Schufa und gesicherte Einkommensverhältnisse erforderlich.</li>
-            <li>Mindestrestlaufzeit des Leasingvertrags: ca. 6 Monate.</li>
+            <li>Mindestrestlaufzeit des Leasingvertrags: Vom Anbieter abhängig (vertragsabhängig).</li>
             <li>Keine Anpassung von Laufleistung oder Zinssatz möglich.</li>
           </ul>
         </div>

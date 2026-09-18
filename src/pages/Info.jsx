@@ -13,10 +13,16 @@ import {
   HelpCircle
 } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function Info() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Ablauf der Leasingübernahme | 4 Schritte zur Vertragsübernahme"
+        description="Wie läuft eine Leasingübernahme ab? Ablauf von der Anfrage über die Schufa-Bonitätsprüfung bis zur Umschreibung und Fahrzeugübergabe."
+        canonicalPath="/info"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}

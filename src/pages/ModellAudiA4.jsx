@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Car, CheckCircle2, ChevronRight } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function ModellAudiA4() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="Audi A4 Leasingübernahme | Audi Leasing (VWFS) Richtlinien"
+        description="Vertragsübernahme für Audi A4 Avant & Limousine über Audi Leasing / VWFS. Voraussetzungen und gewerbliche Übernahmeregeln."
+        canonicalPath="/audi-a4-leasinguebernahme"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -23,20 +29,23 @@ export default function ModellAudiA4() {
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
             Vertragsübernahme für Audi A4 Avant und Limousine (35 TDI, 40 TFSI, S4) über die Volkswagen Financial Services AG (Audi Leasing).
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-950 border border-amber-300 text-xs font-extrabold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+            <span>Fachratgeber Mobilität &amp; Vertragsrecht</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
-        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Definition auf den Punkt (Google AI Snippet)
+        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block">
+            Wichtiger Hinweis &amp; Definition: Audi A4 Leasingübernahme
           </span>
           <p className="font-medium">
-            Die Audi A4 Leasingübernahme ermöglicht die vorzeitige Abgabe oder Übernahme eines Audi A4 ohne teure Kündigungsgebühren. Die Abwicklung erfolgt über die Audi Leasing (VWFS), erfordert mindestens 6 Monate Restlaufzeit und kostet einmalig zwischen 300 € und 450 € Umschreibungsgebühr.
+            Die Audi A4 Leasingübernahme ermöglicht die vorzeitige Abgabe oder Übernahme eines Audi A4. Die Abwicklung erfolgt über die Audi Leasing (VWFS), richtet sich bezüglich der erforderlichen Restlaufzeit nach den jeweiligen Vertragsbedingungen und setzt die beim Leasinggeber zu erfragende Umschreibungsgebühr voraus.
           </p>
+          <div className="bg-rose-100/80 p-2.5 rounded-lg text-xs text-rose-950 font-semibold border border-rose-200">
+            <strong>VWFS-Regelung:</strong> Übernahmen über Audi Leasing (VWFS) sind laut offizieller Erklärung auf <strong>Privatpersonen ausgeschlossen</strong> und finden vorrangig im gewerblichen Bereich statt.
+          </div>
         </div>
 
         <AdSenseBanner slot="9000000007" className="bg-white" />

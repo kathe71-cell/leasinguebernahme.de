@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Check, X, ShieldCheck, Scale, ArrowRight } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function VorteileNachteile() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Vor- & Nachteile einer Leasingübernahme | Objektiver Vergleich"
+        description="Wann lohnt sich eine Leasingübernahme gegenüber Neuwagen-Leasing oder Auto-Abo? Objektiver Vor- und Nachteile-Vergleich für Abgeber & Übernehmer."
+        canonicalPath="/vorteile-nachteile"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -61,7 +67,7 @@ export default function VorteileNachteile() {
             <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
               <li className="flex items-start gap-2">
                 <X className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Umschreibungsgebühren:</strong> Einmalige Bankgebühr (ca. 250 € bis 500 €) fällt an.</span>
+                <span><strong>Umschreibungsgebühren:</strong> Einmalige Bankgebühr (beim jeweiligen Leasinggeber für den konkreten Vertrag zu erfragen) fällt an.</span>
               </li>
               <li className="flex items-start gap-2">
                 <X className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />

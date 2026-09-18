@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { HelpCircle, ChevronDown, ChevronUp, Search, BookOpen } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function FAQ() {
   const [openIdx, setOpenIdx] = useState(null);
@@ -20,7 +21,7 @@ export default function FAQ() {
     },
     {
       q: "Welche Gebühren fallen bei einer Vertragsübernahme an?",
-      a: "Die Leasinggesellschaften erheben eine Bearbeitungs- und Umschreibungsgebühr. Diese liegt je nach Bank meist zwischen 200 € und 600 €. Oft vereinbaren Alt- und Neu-Leasingnehmer, diese Kosten zu teilen."
+      a: "Die Leasinggesellschaften erheben eine Bearbeitungs- und Umschreibungsgebühr. Die genaue Umschreibungsgebühr ist bitte beim jeweiligen Leasinggeber für den konkreten Vertrag zu erfragen, da sie vom Leasinganbieter je nach Kundengruppe und Vertragsmodell individuell festgelegt wird. Oft vereinbaren Alt- und Neu-Leasingnehmer, diese Kosten zu teilen."
     },
     {
       q: "Wer haftet für Kratzer oder Schäden bei der Fahrzeugrückgabe?",
@@ -35,8 +36,12 @@ export default function FAQ() {
       a: "Klassische Leasingverträge sind während der vereinbarten Festlaufzeit ordentlich nicht kündbar. Die Übernahme durch einen Nachfolger ist für den bisherigen Kunden die einzige Möglichkeit, sich vorzeitig aus dem Vertrag zu lösen."
     },
     {
+      q: "Ermöglicht die Volkswagen Financial Services (VWFS) eine Leasingübernahme für Privatpersonen?",
+      a: "Nein, laut offizieller Erklärung der Volkswagen Financial Services (VWFS / VW Bank) ist eine Leasingübernahme auf Privatpersonen derzeit ausgeschlossen. Übertragungen richten sich vorrangig an Geschäftskunden im gewerblichen Bereich (Gewerbe-zu-Gewerbe)."
+    },
+    {
       q: "Wie lange dauert eine Leasingübernahme in der Regel?",
-      a: "Vom ersten Antrag bei der Bank bis zur endgültigen Genehmigung und Fahrzeugübergabe vergehen in der Regel etwa 2 bis 4 Wochen."
+      a: "Die Gesamtdauer hängt maßgeblich von der Bearbeitungszeit der jeweiligen Leasingbank sowie der vollständigen Einreichung aller Antragsunterlagen ab."
     }
   ];
 
@@ -46,6 +51,11 @@ export default function FAQ() {
 
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Leasingübernahme FAQ | Häufige Fragen & Antworten"
+        description="Antworten auf häufig gestellte Fragen zur Leasingübernahme: Voraussetzungen, VWFS Regelungen, Freikilometer, Schäden und Umschreibungsdauer."
+        canonicalPath="/faq"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}

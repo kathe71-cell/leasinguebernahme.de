@@ -54,7 +54,7 @@ export default function Layout({ children }) {
               </div>
             </Link>
 
-            {/* Streamlined Desktop Navigation: Only core guide topics, NO start/faq/impressum */}
+            {/* Streamlined Desktop Navigation: Only core guide topics, NO duplicate checklist link */}
             <nav id="main-navigation" className="hidden md:flex items-center space-x-1 lg:space-x-2" role="navigation" aria-label="Hauptnavigation">
               <Link
                 to="/info"
@@ -93,18 +93,6 @@ export default function Layout({ children }) {
               </Link>
 
               <Link
-                to="/checkliste"
-                className={`px-3.5 py-2 rounded-xl text-sm font-bold transition-all ${
-                  isActive("/checkliste") 
-                    ? "bg-slate-900 text-white shadow-sm" 
-                    : "text-slate-700 hover:text-slate-950 hover:bg-slate-100"
-                }`}
-                onClick={handleLinkClick}
-              >
-                Checkliste
-              </Link>
-
-              <Link
                 to="/marken"
                 className={`px-3.5 py-2 rounded-xl text-sm font-bold transition-all ${
                   isActive("/marken") 
@@ -116,12 +104,12 @@ export default function Layout({ children }) {
                 Marken-Guides
               </Link>
 
-              {/* Quick Action Button */}
+              {/* Quick Action Button for Checkliste & Protocol */}
               <div className="pl-2">
                 <Link to="/checkliste" onClick={handleLinkClick}>
                   <button className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs lg:text-sm px-4 py-2 rounded-xl shadow transition-transform active:scale-95 flex items-center gap-1.5">
                     <FileText className="w-4 h-4 stroke-[2.5]" />
-                    <span>Muster-Vorlage</span>
+                    <span>Übergabe-Checkliste</span>
                   </button>
                 </Link>
               </div>
@@ -199,7 +187,7 @@ export default function Layout({ children }) {
                   Rechtlicher Hinweis &amp; Unabhängigkeit
                 </p>
                 <p>
-                  leasinguebernahme.de ist ein rein unabhängiges Informationsportal und steht in keinem gesellschaftsrechtlichen Verhältnis zu den genannten Automobilherstellern, Autohäusern oder Leasinggesellschaften.
+                  leasingübernahme.de ist ein rein unabhängiges Informationsportal und steht in keinem gesellschaftsrechtlichen Verhältnis zu den genannten Automobilherstellern, Autohäusern oder Leasinggesellschaften.
                 </p>
               </div>
             </div>
@@ -269,6 +257,14 @@ export default function Layout({ children }) {
                   </Link>
                 </li>
                 <li>
+                  <button 
+                    onClick={() => window.dispatchEvent(new Event("open_cookie_settings"))} 
+                    className="text-slate-400 hover:text-white transition-colors text-left focus:outline-none"
+                  >
+                    Cookie-Einstellungen
+                  </button>
+                </li>
+                <li>
                   <Link 
                     to="/faq" 
                     className="text-slate-400 hover:text-white transition-colors"
@@ -282,7 +278,7 @@ export default function Layout({ children }) {
           </div>
           
           <div className="border-t border-slate-800 mt-12 pt-8 text-center text-xs text-slate-500 flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p>&copy; {new Date().getFullYear()} leasinguebernahme.de - Alle Rechte vorbehalten.</p>
+            <p>&copy; {new Date().getFullYear()} leasingübernahme.de - Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>

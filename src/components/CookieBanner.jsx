@@ -20,6 +20,15 @@ export default function CookieBanner() {
     if (!consent) {
       setIsVisible(true);
     }
+
+    const handleOpenSettings = () => {
+      setIsVisible(true);
+    };
+
+    window.addEventListener("open_cookie_settings", handleOpenSettings);
+    return () => {
+      window.removeEventListener("open_cookie_settings", handleOpenSettings);
+    };
   }, []);
 
   const handleAcceptAll = () => {

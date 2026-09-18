@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { DollarSign, Building2, AlertTriangle, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function KostenGebuehren() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Umschreibungsgebühren der Leasingbanken | VWFS, BMW, Mercedes Bank"
+        description="Übersicht der Bearbeitungsgebühren für Leasingübernahmen bei VWFS, BMW Bank, Mercedes-Benz Bank & Stellantis. Wer zahlt die Umschreibung?"
+        canonicalPath="/kosten-gebuehren"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -39,48 +45,57 @@ export default function KostenGebuehren() {
                 <tr className="bg-slate-900 text-white">
                   <th className="p-3.5 font-bold">Leasinggesellschaft</th>
                   <th className="p-3.5 font-bold">Marken</th>
-                  <th className="p-3.5 font-bold text-amber-400">Gebühr (ca. Brutto)</th>
+                  <th className="p-3.5 font-bold text-amber-400">Gebühr (Erfragen)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 <tr>
-                  <td className="p-3.5 font-bold bg-slate-50">Volkswagen Financial Services</td>
+                  <td className="p-3.5 font-bold bg-slate-50">
+                    Volkswagen Financial Services (VWFS)*
+                    <span className="block text-[11px] font-normal text-amber-700 mt-0.5">
+                      Wichtig: Laut offizieller Erklärung ist die Vertragsübernahme auf Privatpersonen ausgeschlossen (vorrangig Gewerbe-zu-Gewerbe).
+                    </span>
+                  </td>
                   <td className="p-3.5">VW, Audi, SEAT, CUPRA, Škoda</td>
-                  <td className="p-3.5 font-bold text-slate-900">300 € – 450 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">BMW Bank</td>
                   <td className="p-3.5">BMW, MINI</td>
-                  <td className="p-3.5 font-bold text-slate-900">400 € – 550 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Mercedes-Benz Bank</td>
                   <td className="p-3.5">Mercedes-Benz, Smart</td>
-                  <td className="p-3.5 font-bold text-slate-900">350 € – 500 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Santander Consumer Bank</td>
                   <td className="p-3.5">Freie Marken / Händler</td>
-                  <td className="p-3.5 font-bold text-slate-900">250 € – 400 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Stellantis Bank</td>
                   <td className="p-3.5">Opel, Peugeot, Citroën, Fiat</td>
-                  <td className="p-3.5 font-bold text-slate-900">300 € – 450 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Sixt Neuwagen / LeasePlan</td>
                   <td className="p-3.5">Gewerbe &amp; Flotten</td>
-                  <td className="p-3.5 font-bold text-slate-900">350 € – 600 €</td>
+                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
+          <p className="text-[11px] text-slate-500 italic">
+            * Hinweis: Die Umschreibungsgebühr bitte beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen. Gebühren werden je nach Kundengruppe (Privat / Gewerbe) und Vertragsmodell vom Leasinggeber individuell festgelegt.
+          </p>
+
           <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl text-slate-900 text-xs leading-relaxed space-y-1">
             <strong className="font-bold text-slate-900 block">Wer zahlt die Umschreibungsgebühr?</strong>
             <p>
-              Rechtlich wird die Gebühr der Leasingbank von der Person gefordert, die den Vertrag übernimmt oder abgibt. In der Praxis einigen sich Alt- und Neu-Leasingnehmer häufig darauf, die Gebühr zu 50:50 zu teilen.
+              Rechtlich wird die Gebühr der Leasingbank von der Person gefordert, die den Vertrag übernimmt oder abgibt. In der Praxis einigen sich Alt- und Neu-Leasingnehmer häufig darauf, die Gebühr zu teilen oder über eine Ausgleichszahlung zu verrechnen.
             </p>
           </div>
         </div>

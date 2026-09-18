@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import Layout from '@/pages/Layout';
 import Index from '@/pages/index';
 import Info from '@/pages/Info';
@@ -46,13 +46,24 @@ import RatgeberPrivatGewerbe from '@/pages/RatgeberPrivatGewerbe';
 
 import { Toaster } from '@/components/ui/toaster';
 
-function App() {
+function MainLayout() {
   return (
-    <BrowserRouter>
+    <Layout>
+      <Outlet />
+    </Layout>
+  );
+}
+
+export function AppRoutes() {
+  return (
+    <>
       <VercelAnalytics />
-      <Layout>
-        <Routes>
-          {/* Main Ratgeber Routes */}
+      <Routes>
+        {/* Rechner Embed (Clean Widget Route without website header/footer) */}
+        <Route path="/rechner-embed" element={<RechnerEmbed />} />
+
+        {/* Main Website Layout */}
+        <Route element={<MainLayout />}>
           <Route path="/" element={<Index />} />
           <Route path="/info" element={<Info />} />
           <Route path="/ablauf" element={<Info />} />
@@ -62,9 +73,6 @@ function App() {
           <Route path="/checkliste" element={<Checkliste />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/marken" element={<Marken />} />
-          
-          {/* Rechner Embed (Clean Widget Route) */}
-          <Route path="/rechner-embed" element={<RechnerEmbed />} />
 
           {/* High Intent Model Guides */}
           <Route path="/vw-golf-leasinguebernahme" element={<ModellGolf />} />
@@ -164,9 +172,17 @@ function App() {
           <Route path="/inserat" element={<Navigate to="/" replace />} />
           <Route path="/admindashboard" element={<Navigate to="/" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Layout>
+        </Route>
+      </Routes>
       <Toaster />
+    </>
+  );
+}
+
+function App() {
+  return (
+    <BrowserRouter>
+      <AppRoutes />
     </BrowserRouter>
   );
 }

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Car, Building2, ChevronRight, ArrowRight } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function Marken() {
   const brands = [
@@ -30,6 +31,11 @@ export default function Marken() {
 
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Marken-Übersicht für Leasingübernahmen | VW, Audi, BMW & Mercedes"
+        description="Ratgeber und Bank-Richtlinien der einzelnen Automarken für die Leasingübernahme. Regelungen von VWFS, BMW Bank, Mercedes-Benz Bank & mehr."
+        canonicalPath="/marken"
+      />
       <div className="max-w-5xl mx-auto space-y-10">
         
         {/* Header */}

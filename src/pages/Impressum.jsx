@@ -1,10 +1,16 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building, Mail, MapPin, Phone, ShieldCheck, Scale, AlertCircle } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 export default function Impressum() {
   return (
     <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Impressum | Leasingübernahme.de"
+        description="Rechtliche Angaben und Impressum gemäß § 5 DDG sowie § 18 MStV für das unabhängige Informations- und Fachportal Leasingübernahme.de."
+        canonicalPath="/impressum"
+      />
       <div className="max-w-4xl mx-auto space-y-8">
         
         {/* Header */}
@@ -116,7 +122,7 @@ export default function Impressum() {
             <div>
               <h3 className="font-bold text-slate-900 text-base mb-2">Unabhängiges Informationsportal</h3>
               <p>
-                leasinguebernahme.de ist ein unabhängiges Informations- und Vergleichsportal. Wir stehen in keinem gesellschaftsrechtlichen Verhältnis zu den auf dieser Seite genannten Automobilherstellern, Autohäusern oder Leasinggesellschaften. Alle geschützten Markennamen und Logos sind Eigentum der jeweiligen Rechteinhaber und dienen auf dieser Website ausschließlich der sachlichen Information.
+                leasingübernahme.de ist ein unabhängiges Informations- und Vergleichsportal. Wir stehen in keinem gesellschaftsrechtlichen Verhältnis zu den auf dieser Seite genannten Automobilherstellern, Autohäusern oder Leasinggesellschaften. Alle geschützten Markennamen und Logos sind Eigentum der jeweiligen Rechteinhaber und dienen auf dieser Website ausschließlich der sachlichen Information.
               </p>
             </div>
 

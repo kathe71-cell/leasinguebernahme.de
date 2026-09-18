@@ -1,138 +1,90 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
-// SEO-Komponente für strukturierte Daten und Meta-Informationen
-// Wird als JSON-LD Script in die Seite eingefügt
+const BASE_DOMAIN = "https://www.xn--leasingbernahme-5vb.de";
+
 export default function SEOHead({ 
-  title = "Leasingübernahme.de - Leasing Fahrzeuge finden",
-  description = "Finden Sie attraktive Leasingfahrzeuge oder stellen Sie Ihr Fahrzeug zur Übernahme ein. Schnell, einfach und kostenlos.",
-  type = "website",
-  image = null,
-  url = null,
-  brand = null,
-  price = null,
+  title = "Leasingübernahme Ratgeber | Ablauf, Umschreibungsgebühren & Rechner",
+  description = "Der unabhängige Ratgeber für Leasingübernahmen in Deutschland: Ablauf, Schufa-Bonitätsprüfung, Umschreibungsgebühren, Vor- & Nachteile, Checklisten & Ersparnisrechner.",
+  canonicalPath = null,
   structuredData = null
 }) {
-  // Basis-Strukturierte Daten für die Organisation
+  const location = useLocation();
+  const path = canonicalPath || location.pathname;
+  const canonicalUrl = `${BASE_DOMAIN}${path === "/" ? "" : path}`;
+
+  useEffect(() => {
+    // 1. Title
+    if (title) {
+      document.title = title;
+    }
+
+    // 2. Meta description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute("content", description);
+    } else {
+      metaDesc = document.createElement("meta");
+      metaDesc.name = "description";
+      metaDesc.content = description;
+      document.head.appendChild(metaDesc);
+    }
+
+    // 3. Canonical URL
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (linkCanonical) {
+      linkCanonical.setAttribute("href", canonicalUrl);
+    } else {
+      linkCanonical = document.createElement("link");
+      linkCanonical.rel = "canonical";
+      linkCanonical.href = canonicalUrl;
+      document.head.appendChild(linkCanonical);
+    }
+
+    // 4. OpenGraph Meta Tags
+    let ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.setAttribute("content", title);
+
+    let ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.setAttribute("content", description);
+
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.setAttribute("content", canonicalUrl);
+
+    let twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) twitterTitle.setAttribute("content", title);
+
+    let twitterDesc = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDesc) twitterDesc.setAttribute("content", description);
+
+  }, [title, description, canonicalUrl]);
+
+  // Base Organization & WebSite JSON-LD
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Leasingübernahme.de",
-    "url": "https://leasinguebernahme.de",
-    "logo": "https://leasinguebernahme.de/logo.png",
-    "description": "Portal für Leasingübernahmen in Deutschland",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "DE"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "availableLanguage": "German"
-    }
+    "url": BASE_DOMAIN,
+    "logo": `${BASE_DOMAIN}/favicon.svg`,
+    "description": "Unabhängiger Ratgeber und Fachportal für Leasingübernahmen in Deutschland"
   };
 
-  // WebSite-Daten für Suchmaschinen
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Leasingübernahme.de",
-    "url": "https://leasinguebernahme.de",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://leasinguebernahme.de/Fahrzeugliste?search={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
-
-  // Fahrzeug-spezifische Daten wenn vorhanden
-  const vehicleData = brand ? {
-    "@context": "https://schema.org",
-    "@type": "Vehicle",
-    "brand": {
-      "@type": "Brand",
-      "name": brand
-    },
-    "offers": price ? {
-      "@type": "Offer",
-      "priceCurrency": "EUR",
-      "price": price,
-      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-    } : undefined
-  } : null;
-
-  // Breadcrumb-Daten
-  const breadcrumbData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Startseite",
-        "item": "https://leasinguebernahme.de"
-      }
-    ]
+    "url": BASE_DOMAIN
   };
 
   const allData = [organizationData, websiteData];
-  if (vehicleData) allData.push(vehicleData);
   if (structuredData) allData.push(structuredData);
 
   return (
-    <>
-      {/* Strukturierte Daten als JSON-LD */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(allData)
-        }}
-      />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(allData)
+      }}
+    />
   );
-}
-
-// Hilfsfunktion für FAQ-Schema
-export function generateFAQSchema(faqs) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
-      "@type": "Question",
-      "name": faq.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
-  };
-}
-
-// Hilfsfunktion für Produkt-Schema (Fahrzeuge)
-export function generateVehicleSchema(vehicle) {
-  return {
-    "@context": "https://schema.org",
-    "@type": "Car",
-    "name": `${vehicle.brand} ${vehicle.model}`,
-    "brand": {
-      "@type": "Brand",
-      "name": vehicle.brand
-    },
-    "model": vehicle.model,
-    "vehicleModelDate": vehicle.year?.toString(),
-    "mileageFromOdometer": {
-      "@type": "QuantitativeValue",
-      "value": vehicle.mileage,
-      "unitCode": "KMT"
-    },
-    "fuelType": vehicle.fuel_type,
-    "vehicleTransmission": vehicle.transmission,
-    "color": vehicle.color,
-    "offers": {
-      "@type": "Offer",
-      "priceCurrency": "EUR",
-      "price": vehicle.offer_type === 'kauf' ? vehicle.cash_price : vehicle.monthly_rate,
-      "availability": "https://schema.org/InStock",
-      "priceValidUntil": new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]
-    }
-  };
 }

@@ -1,11 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Building2, ShieldCheck, DollarSign, FileText, ArrowRight, ChevronRight, Info } from "lucide-react";
+import { Building2, ShieldCheck, CheckCircle2, Info } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function MarkeCupra() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="CUPRA Leasingübernahme | Umschreibung & VWFS Vorgaben"
+        description="Leitfaden zur CUPRA Leasingübernahme über SEAT Financial Services / VWFS: Umschreibungsgebühren, gewerbliche Übertragungen & Ablauf."
+        canonicalPath="/marke-cupra"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -33,15 +39,21 @@ export default function MarkeCupra() {
           </h2>
           <div className="text-slate-700 text-sm leading-relaxed space-y-3">
             <p>
-              Leasingverträge der Marke <strong>CUPRA</strong> werden in Deutschland vorwiegend über die <strong>Volkswagen Financial Services AG (VWFS) / SEAT Financial Services</strong> abgewickelt. Eine Übertragung auf einen neuen Leasingnehmer ist möglich, sofern die Bank nach einer Bonitätsprüfung zustimmt.
+              Leasingverträge der Marke <strong>CUPRA</strong> (Formentor, Born, Leon etc.) werden in Deutschland über die <strong>Volkswagen Financial Services AG (VWFS) / SEAT Financial Services</strong> abgewickelt.
             </p>
+            <div className="bg-rose-50 border-l-4 border-rose-500 p-4 rounded-r-xl text-xs text-slate-800 space-y-1">
+              <strong className="text-rose-950 font-bold block text-sm">Wchtige VWFS-Bestimmung:</strong>
+              <p className="text-slate-700">
+                Laut offizieller Erklärung der VWFS ist eine Leasingübernahme auf <strong>Privatpersonen ausgeschlossen</strong>. CUPRA Übernahmen sind vorrangig im Geschäftskunden-Bereich (Gewerbe-zu-Gewerbe) realisierbar.
+              </p>
+            </div>
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
-              <strong className="text-slate-900 font-bold block text-sm">Die wichtigsten Daten auf einen Blick:</strong>
+              <strong className="text-slate-900 font-bold block text-sm">Eckdaten zur CUPRA Leasingübernahme (Orientierungswerte):</strong>
               <ul className="list-disc list-inside space-y-1 text-xs text-slate-700">
-                <li><strong>Umschreibungsgebühr:</strong> ca. 300 € bis 450 € inkl. MwSt.</li>
-                <li><strong>Mindestrestlaufzeit:</strong> In der Regel mindestens 6 Monate.</li>
-                <li><strong>Bonitätsprüfung:</strong> Positive Schufa sowie Gehaltsnachweise (Arbeitnehmer) bzw. BWA/EÜR (Gewerbe).</li>
-                <li><strong>Konditionen:</strong> Die vereinbarte Leasingrate und die jährliche Kilometerleistung bleiben unverändert.</li>
+                <li><strong>Umschreibungsgebühr:</strong> Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen.</li>
+                <li><strong>Mindestrestlaufzeit:</strong> Vom jeweiligen Anbieter geforderte Restlaufzeit (vertragsabhängig).</li>
+                <li><strong>Bonitätsprüfung:</strong> Gewerbliche BWA / EÜR Prüfung.</li>
+                <li><strong>Konditionen:</strong> Monatsrate und Freikilometer bleiben unverändert.</li>
               </ul>
             </div>
           </div>
@@ -59,7 +71,7 @@ export default function MarkeCupra() {
             <ol className="list-decimal list-inside space-y-2 font-medium text-slate-800">
               <li><strong>Antrag anfordern:</strong> Der bisherige Leasingnehmer fordert die Umschreibungsunterlagen bei der Volkswagen Financial Services AG (VWFS) / SEAT Financial Services an.</li>
               <li><strong>Unterlagen einreichen:</strong> Der Übernehmer füllt die Selbstauskunft aus und legt seine Bonitätsunterlagen bei.</li>
-              <li><strong>Prüfung durch die Bank:</strong> Die Leasingbank prüft die Kreditwürdigkeit (Dauer ca. 1 bis 2 Wochen).</li>
+              <li><strong>Prüfung durch die Bank:</strong> Die Leasingbank prüft die Kreditwürdigkeit nach Eingang aller Antragsunterlagen.</li>
               <li><strong>Vertrag unterschreiben:</strong> Nach Genehmigung unterschreiben Alt- und Neukunde die offizielle Schuldübernahme.</li>
               <li><strong>Fahrzeugübergabe:</strong> Durchführung der Übergabe mit detailliertem Protokoll und Festhalten des Kilometerstands.</li>
             </ol>

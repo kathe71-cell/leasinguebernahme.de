@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Zap, CheckCircle2, ChevronRight, Car, Info } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function ModellTeslaModelY() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="Tesla Model Y Leasingübernahme | App-Transfer & Bankablauf"
+        description="Ratgeber zur Übernahme von Tesla Model Y Leasingverträgen: Digitale Fahrzeugübertragung in der Tesla App & Partnerbanken."
+        canonicalPath="/tesla-model-y-leasinguebernahme"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -23,19 +29,19 @@ export default function ModellTeslaModelY() {
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
             Der umfassende Leitfaden zur Übernahme von Tesla Model Y Leasingverträgen (RWD, Maximale Reichweite, Performance) und digitaler Fahrzeugübertragung in der Tesla App.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-950 border border-amber-300 text-xs font-extrabold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+            <span>Fachratgeber Mobilität &amp; Vertragsrecht</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
         <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Definition auf den Punkt (Google AI Snippet)
+            Kompakt-Definition: Tesla Model Y Leasingübernahme
           </span>
           <p className="font-medium">
-            Die Tesla Model Y Leasingübernahme kombiniert die bankseitige Schuldübernahme (meist über Santander Consumer Bank oder CA Auto Bank) mit der digitalen Fahrzeugübertragung im Tesla-Konto. Die Umschreibungsgebühr beträgt etwa 350 € bis 500 €, wobei bestehende Software-Optionen wie der Enhanced Autopilot erhalten bleiben.
+            Die Tesla Model Y Leasingübernahme kombiniert die bankseitige Schuldübernahme (z. B. CA Auto Bank oder Santander Consumer Bank) mit der digitalen Fahrzeugübertragung im Tesla-Konto. Die Umschreibungsgebühr ist beim jeweiligen Finanzierungspartner zu erfragen, wobei bestehende Software-Optionen wie der Enhanced Autopilot erhalten bleiben.
           </p>
         </div>
 
@@ -74,8 +80,8 @@ export default function ModellTeslaModelY() {
             Tesla nutzt in Deutschland verschiedene Partnergesellschaften für Leasingverträge. Prüfen Sie Ihren Leasingvertrag auf den exakten Vertragspartner:
           </p>
           <ul className="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-700 font-medium">
-            <li><strong>Santander Consumer Bank AG:</strong> Betreut den Großteil der Privatleasingverträge (Umschreibung ca. 350 € bis 450 €).</li>
-            <li><strong>CA Auto Bank (ehem. FCA Bank):</strong> Häufig bei neueren Modelljahren (Umschreibung ca. 300 € bis 400 €).</li>
+            <li><strong>Santander Consumer Bank AG:</strong> Betreut einen Großteil der Privatleasingverträge (Umschreibungsgebühr beim Leasinggeber zu erfragen).</li>
+            <li><strong>CA Auto Bank (ehem. FCA Bank):</strong> Häufig bei neueren Modelljahren (Umschreibungsgebühr beim Leasinggeber zu erfragen).</li>
             <li><strong>Tesla Financial Services Deutschland:</strong> Für gewerbliche Flotten und ausgewählte Privatverträge.</li>
           </ul>
         </div>

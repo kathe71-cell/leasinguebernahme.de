@@ -1,6 +1,7 @@
 import React from "react";
 import { FileText, CheckSquare, Printer, ShieldCheck, Download } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function Checkliste() {
   const handlePrint = () => {
@@ -9,6 +10,12 @@ export default function Checkliste() {
 
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Muster-Übergabeprotokoll & Checkliste für Leasingübernahmen"
+        description="Kostenlose Checkliste und Muster-Vorlage für die Fahrzeugübergabe bei Leasingübernahmen. Dokumentation von Freikilometern, Fahrzeugzustand und Vorschäden."
+        canonicalPath="/checkliste"
+      />
+
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -21,7 +28,7 @@ export default function Checkliste() {
               Übergabeprotokoll Checkliste
             </h1>
             <p className="mt-3 text-slate-600 text-base leading-relaxed">
-              Verwenden Sie dieses kostenlose Protokoll bei der Fahrzeugübergabe, um bestehende Schäden rechtssicher zu dokumentieren.
+              Verwenden Sie dieses kostenlose Muster-Protokoll bei der Fahrzeugübergabe, um den Fahrzeugzustand, Kilometerstand und bestehende Vorschäden strukturiert zu dokumentieren.
             </p>
           </div>
           <button 
@@ -40,7 +47,7 @@ export default function Checkliste() {
           <div className="border-b border-slate-200 pb-4 flex justify-between items-center">
             <div>
               <h2 className="font-extrabold text-slate-900 text-xl">Muster-Fahrzeugübernahme-Protokoll</h2>
-              <p className="text-xs text-slate-500">leasinguebernahme.de • Kostenlose Dokumentationsvorlage</p>
+              <p className="text-xs text-slate-500">leasingübernahme.de • Kostenlose Dokumentationshilfe</p>
             </div>
             <span className="text-xs text-slate-400">Datum: __________________</span>
           </div>

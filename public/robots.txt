@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://leasinguebernahme.de/sitemap.xml
+Sitemap: https://www.xn--leasingbernahme-5vb.de/sitemap.xml

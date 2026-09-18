@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Calculator, CheckCircle2, ChevronRight, Car, Info } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function ModellBmw3er() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="BMW 3er Leasingübernahme | Konditionen der BMW Bank GmbH"
+        description="Alles zur Übernahme von BMW 3er Leasingverträgen (G20/G21) über die BMW Bank GmbH. Bearbeitungsgebühren und Ablauf."
+        canonicalPath="/bmw-3er-leasinguebernahme"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -23,19 +29,19 @@ export default function ModellBmw3er() {
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
             Alles zur Vertragsübernahme der BMW 3er Baureihe (G20 Limousine, G21 Touring – 318i, 320d, 330e, M340i) über die BMW Bank GmbH.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-950 border border-amber-300 text-xs font-extrabold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+            <span>Fachratgeber Mobilität &amp; Vertragsrecht</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
         <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Definition auf den Punkt (Google AI Snippet)
+            Kompakt-Definition: BMW 3er Leasingübernahme
           </span>
           <p className="font-medium">
-            Die BMW 3er Leasingübernahme ist die Übertragung eines bestehenden Leasingvertrags auf einen neuen Halter über die BMW Bank GmbH. Die Bearbeitungsgebühr beträgt zwischen 400 € und 550 € brutto, die Restlaufzeit muss mindestens 6 Monate betragen und die monatliche Rate sowie Restwertbedingungen bleiben unverändert.
+            Die BMW 3er Leasingübernahme ist die Übertragung eines bestehenden Leasingvertrags auf einen neuen Halter über die BMW Bank GmbH. Die Bearbeitungsgebühr ist direkt bei der BMW Bank für den konkreten Vertrag zu erfragen, die erforderliche Restlaufzeit richtet sich nach den Bedingungen des konkreten Vertrags und der BMW Bank und die monatliche Rate sowie vereinbarte Freikilometer bleiben unverändert.
           </p>
         </div>
 
@@ -52,8 +58,8 @@ export default function ModellBmw3er() {
               <thead>
                 <tr className="bg-slate-900 text-white">
                   <th className="p-3 font-bold">Modell</th>
-                  <th className="p-3 font-bold">Neuwagen-Leasingrate</th>
-                  <th className="p-3 font-bold text-amber-400">Typische Übernahme-Rate</th>
+                  <th className="p-3 font-bold">Beispielhafte Neu-Rate*</th>
+                  <th className="p-3 font-bold text-amber-400">Beispielhafte Übernahmerate*</th>
                   <th className="p-3 font-bold">BMW Bank Gebühr</th>
                 </tr>
               </thead>
@@ -62,23 +68,26 @@ export default function ModellBmw3er() {
                   <td className="p-3 font-bold bg-slate-50">BMW 320d Touring (G21)</td>
                   <td className="p-3">540 € – 680 €</td>
                   <td className="p-3 font-bold text-emerald-700">380 € – 490 €</td>
-                  <td className="p-3">ca. 450 €</td>
+                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">BMW 330e Plug-in-Hybrid</td>
                   <td className="p-3">590 € – 720 €</td>
                   <td className="p-3 font-bold text-emerald-700">420 € – 530 €</td>
-                  <td className="p-3">ca. 450 €</td>
+                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">BMW M340i xDrive</td>
                   <td className="p-3">780 € – 990 €</td>
                   <td className="p-3 font-bold text-emerald-700">590 € – 750 €</td>
-                  <td className="p-3">ca. 500 €</td>
+                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
                 </tr>
               </tbody>
             </table>
           </div>
+          <p className="text-[11px] text-slate-500 italic mt-2">
+            * Modellrechnung zur Illustration: Die tatsächliche Ratenhöhe und Ersparnis hängt vom konkreten Erstvertrag ab.
+          </p>
         </div>
 
         {/* Wichtige Hinweise */}

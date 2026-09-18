@@ -1,10 +1,16 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Database, Eye, Mail, Lock } from "lucide-react";
+import SEOHead from "@/components/SEOHead";
 
 export default function Datenschutz() {
   return (
     <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Datenschutzerklärung | Leasingübernahme.de"
+        description="Datenschutzerklärung nach Art. 13 & 14 DSGVO für Leasingübernahme.de: Transparenz bei Datenverarbeitung, Vercel-Hosting & Zero-CDN Typografie."
+        canonicalPath="/datenschutz"
+      />
       <div className="max-w-4xl mx-auto space-y-8">
         
         {/* Header */}
@@ -68,12 +74,30 @@ export default function Datenschutz() {
           </CardContent>
         </Card>
 
-        {/* 4. Ihre Rechte */}
+        {/* 4. Google AdSense & Werbeanzeigen */}
         <Card className="bg-white border-slate-200 shadow-sm hover:shadow-md transition-shadow">
           <CardHeader className="border-b border-slate-100 bg-slate-50/50 py-4">
             <CardTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <Eye className="w-5 h-5 text-amber-600" />
-              4. Ihre Betroffenenrechte (Art. 15–21 DSGVO)
+              4. Einbindung von Werbeanzeigen (Google AdSense)
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-6 space-y-3 text-slate-700 text-sm leading-relaxed">
+            <p>
+              Auf dieser Website sind Skripte des Kartendienstes bzw. Werbedienstes Google AdSense der Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland eingebunden. Google AdSense nutzt Cookies und ähnliche Technologien zur Bereitstellung, Messung und Optimierung von Werbeanzeigen.
+            </p>
+            <p>
+              Die Datenverarbeitung erfolgt auf Grundlage Ihrer freiwilligen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Cookie-Einwilligung jederzeit über den Link „Cookie-Einstellungen“ im Footer unserer Website anpassen oder widerrufen.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* 5. Ihre Rechte */}
+        <Card className="bg-white border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+          <CardHeader className="border-b border-slate-100 bg-slate-50/50 py-4">
+            <CardTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
+              <Mail className="w-5 h-5 text-amber-600" />
+              5. Ihre Betroffenenrechte (Art. 15–21 DSGVO)
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-6 space-y-3 text-slate-700 text-sm leading-relaxed">

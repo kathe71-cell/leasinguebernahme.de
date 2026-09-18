@@ -1,26 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { 
-  BookOpen, 
-  CheckCircle2, 
-  Calculator, 
-  HelpCircle, 
-  ShieldCheck, 
-  FileText, 
-  ArrowRight, 
-  Clock, 
-  DollarSign, 
-  AlertTriangle, 
-  Award, 
-  Check, 
-  X,
-  ChevronRight,
-  Zap,
-  Sparkles,
-  Building2,
-  Users
-} from "lucide-react";
+import { Sparkles, ArrowRight, Clock, ChevronRight, DollarSign, ShieldCheck, Calculator, Building2, FileText } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function Index() {
   // Rechner State
@@ -28,12 +10,28 @@ export default function Index() {
   const [takeoverRate, setTakeoverRate] = useState(330);
   const [months, setMonths] = useState(18);
   const [transferFee, setTransferFee] = useState(300);
+  const [incentive, setIncentive] = useState(0);
+  const [extraCosts, setExtraCosts] = useState(0);
 
-  const totalRateSavings = Math.max(0, (origRate - takeoverRate) * months);
-  const netSavings = Math.max(0, totalRateSavings - transferFee);
+  // Input Sanitize
+  const safeOrig = Number(origRate) || 0;
+  const safeTakeover = Number(takeoverRate) || 0;
+  const safeMonths = Math.max(1, Number(months) || 1);
+  const safeFee = Number(transferFee) || 0;
+  const safeIncentive = Number(incentive) || 0;
+  const safeExtra = Number(extraCosts) || 0;
+
+  // Calculation (Unclamped)
+  const totalRateDiff = (safeOrig - safeTakeover) * safeMonths;
+  const netDifference = totalRateDiff + safeIncentive - safeFee - safeExtra;
 
   return (
     <div className="bg-slate-50 min-h-screen">
+      <SEOHead 
+        title="Leasingübernahme Ratgeber | Ablauf, Umschreibungsgebühren & Rechner"
+        description="Der unabhängige Ratgeber für Leasingübernahmen in Deutschland: Alles zu Ablauf, Schufa-Bonitätsprüfung, Umschreibungsgebühren, Vor- & Nachteile, Checklisten & Ersparnisrechner."
+        canonicalPath="/"
+      />
       
       {/* HERO SECTION */}
       <section className="relative bg-slate-900 text-white pt-16 pb-20 border-b border-slate-800 overflow-hidden">
@@ -58,10 +56,10 @@ export default function Index() {
             {/* Position 0 Definition Box */}
             <div className="bg-slate-800/90 border-l-4 border-amber-500 p-4 sm:p-5 rounded-r-2xl text-left text-xs sm:text-sm text-slate-200 leading-relaxed shadow-lg">
               <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-400 block mb-1">
-                Definition auf den Punkt (Google AI Snippet)
+                Kompakt-Definition: Leasingübernahme
               </span>
               <p>
-                Eine <strong>Leasingübernahme</strong> bezeichnet den rechtlichen Eintritt eines neuen Leasingnehmers in einen laufenden Fahrzeug-Leasingvertrag (Schuldübernahme nach § 415 BGB). Der Übernehmer übernimmt die bestehende Monatsrate und Restlaufzeit ohne Sonderzahlung, während der Vorbesitzer aus dem Vertrag entlassen wird.
+                Eine <strong>Leasingübernahme</strong> bezeichnet den rechtlichen Eintritt eines neuen Leasingnehmers in einen laufenden Fahrzeug-Leasingvertrag (Schuldübernahme nach § 415 BGB) mit Zustimmung der Leasinggesellschaft. Der Übernehmer übernimmt die vereinbarte Monatsrate und Restlaufzeit (ggf. inklusive vereinbarter Ausgleichszahlungen oder Bearbeitungsgebühren). Die vollständige Entlassung des Alt-Leasingnehmers erfolgt gemäß bestätigter Vereinbarung der Leasingbank.
               </p>
             </div>
 
@@ -209,20 +207,21 @@ export default function Index() {
             Leasingübernahme Kosten- &amp; Ersparnisrechner
           </h2>
           <p className="text-slate-600 mt-2 text-sm">
-            Berechnen Sie das individuelle Einsparpotenzial unter Berücksichtigung der Umschreibungsgebühr.
+            Berechnen Sie das individuelle Ergebnis unter Berücksichtigung von Raten, Bankgebühren und Einmalkosten.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
-          <div className="space-y-5">
+        <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm">
+          <div className="space-y-4">
             <div>
               <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-700 mb-1">
                 Reguläre Neuwagen-Leasingrate (€/Monat)
               </label>
               <input 
                 type="number" 
+                min="0"
                 value={origRate} 
-                onChange={(e) => setOrigRate(Number(e.target.value))} 
+                onChange={(e) => setOrigRate(e.target.value)} 
                 className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
@@ -233,21 +232,22 @@ export default function Index() {
               </label>
               <input 
                 type="number" 
+                min="0"
                 value={takeoverRate} 
-                onChange={(e) => setTakeoverRate(Number(e.target.value))} 
+                onChange={(e) => setTakeoverRate(e.target.value)} 
                 className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
             </div>
 
             <div>
               <label className="block text-xs font-extrabold uppercase tracking-wider text-slate-700 mb-1">
-                Restlaufzeit (Monate): {months} Monate
+                Restlaufzeit (Monate): {safeMonths} Monate
               </label>
               <input 
                 type="range" 
-                min="6" 
-                max="36" 
-                value={months} 
+                min="1" 
+                max="48" 
+                value={safeMonths} 
                 onChange={(e) => setMonths(Number(e.target.value))} 
                 className="w-full accent-amber-500 cursor-pointer"
               />
@@ -259,26 +259,91 @@ export default function Index() {
               </label>
               <input 
                 type="number" 
+                min="0"
                 value={transferFee} 
-                onChange={(e) => setTransferFee(Number(e.target.value))} 
+                onChange={(e) => setTransferFee(e.target.value)} 
                 className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-bold text-sm focus:outline-none focus:ring-2 focus:ring-amber-500"
               />
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+              <div>
+                <label className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+                  Ausgleichszahlung Abgeber (€, optional)
+                </label>
+                <input 
+                  type="number" 
+                  min="0"
+                  placeholder="0"
+                  value={incentive} 
+                  onChange={(e) => setIncentive(e.target.value)} 
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-bold text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-extrabold uppercase tracking-wider text-slate-600 mb-1">
+                  Sonstige Einmalkosten (€, optional)
+                </label>
+                <input 
+                  type="number" 
+                  min="0"
+                  placeholder="0"
+                  value={extraCosts} 
+                  onChange={(e) => setExtraCosts(e.target.value)} 
+                  className="w-full p-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 font-bold text-xs focus:outline-none focus:ring-2 focus:ring-amber-500"
+                />
+              </div>
             </div>
           </div>
 
           <div className="bg-slate-900 text-white p-6 rounded-2xl space-y-4 text-center">
             <span className="text-xs uppercase tracking-widest text-slate-400 font-bold">
-              Netto-Gesamtersparnis *
+              {netDifference > 0 
+                ? "Finanzieller Vorteil für Übernehmer *" 
+                : netDifference < 0 
+                ? "Mehrkosten gegenüber Neuvertrag *" 
+                : "Ergebnis: Kostenneutral *"}
             </span>
-            <div className="text-4xl sm:text-5xl font-extrabold text-amber-400">
-              {netSavings.toLocaleString('de-DE')} €
+
+            <div className={`text-3xl sm:text-5xl font-extrabold ${
+              netDifference > 0 ? "text-emerald-400" : netDifference < 0 ? "text-rose-400" : "text-amber-400"
+            }`}>
+              {netDifference > 0 ? "+" : ""}{netDifference.toLocaleString('de-DE')} €
             </div>
-            <div className="space-y-1 text-xs text-slate-300 border-t border-slate-800 pt-3">
-              <p>Ratenersparnis: <strong>{totalRateSavings.toLocaleString('de-DE')} €</strong></p>
-              <p>Abzüglich Bankgebühr: <strong>-{transferFee} €</strong></p>
+
+            <div className="space-y-1 text-xs text-slate-300 border-t border-slate-800 pt-3 text-left">
+              <p className="flex justify-between">
+                <span>Differenz Monatsraten ({safeMonths} M.):</span>
+                <strong>{totalRateDiff > 0 ? "+" : ""}{totalRateDiff.toLocaleString('de-DE')} €</strong>
+              </p>
+              {safeIncentive > 0 && (
+                <p className="flex justify-between text-emerald-300">
+                  <span>+ Ausgleichszahlung Abgeber:</span>
+                  <strong>+{safeIncentive.toLocaleString('de-DE')} €</strong>
+                </p>
+              )}
+              <p className="flex justify-between text-slate-400">
+                <span>- Umschreibungsgebühr Bank:</span>
+                <strong>-{safeFee.toLocaleString('de-DE')} €</strong>
+              </p>
+              {safeExtra > 0 && (
+                <p className="flex justify-between text-slate-400">
+                  <span>- Sonstige Einmalkosten:</span>
+                  <strong>-{safeExtra.toLocaleString('de-DE')} €</strong>
+                </p>
+              )}
             </div>
-            <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400 italic">
-              * Modellrechnung. Die tatsächliche Höhe hängt vom individuellen Nutzungsverhalten und den Konditionen des Anbieters ab.
+
+            <div className="pt-2 border-t border-slate-800 text-[11px] text-slate-400 text-left space-y-1">
+              <p className="italic">
+                * Modellrechnung. Die tatsächliche Auswirkung hängt vom individuellen Nutzungsverhalten und den Vertragskonditionen ab.
+              </p>
+              <div className="bg-slate-800 p-2.5 rounded-lg text-[10px] text-slate-300 space-y-0.5 mt-2">
+                <strong className="text-amber-400 block font-bold">Wichtige Prüfpunkte vor der Übernahme:</strong>
+                <p>• <strong>Kilometerbudget:</strong> Verbleibende Freikilometer prüfen &amp; mit eigener Fahrleistung abgleichen.</p>
+                <p>• <strong>Fahrzeugzustand:</strong> Bekannte Schäden und Vorschäden im Übergabeprotokoll festhalten.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -292,7 +357,7 @@ export default function Index() {
           <div className="flex items-center gap-2 w-full sm:w-auto">
             <input 
               readOnly 
-              value='<iframe src="https://www.leasingübernahme.de/rechner-embed" width="100%" height="450" frameborder="0"></iframe>' 
+              value='<iframe src="https://www.xn--leasingbernahme-5vb.de/rechner-embed" width="100%" height="520" frameborder="0"></iframe>' 
               className="bg-white px-2 py-1.5 rounded-lg border border-slate-300 text-[11px] font-mono w-full sm:w-64 select-all"
               onClick={(e) => e.target.select()}
             />
@@ -308,15 +373,16 @@ export default function Index() {
         <AdSenseBanner slot="1000000002" className="bg-white" />
       </div>
 
-      {/* VERGLEICHSTABELLE */}
-      <section className="py-12 bg-white border-y border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
-              Vergleich: Leasingübernahme vs. Neuwagen vs. Auto-Abo
+      {/* VERGLEICHSTABELLE LEASINGÜBERNAHME VS NEUWAGEN VS ABO */}
+      <section className="py-16 bg-white border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          <div className="text-center max-w-3xl mx-auto space-y-2">
+            <span className="text-xs font-extrabold text-amber-600 uppercase tracking-widest">Vergleich</span>
+            <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900">
+              Leasingübernahme vs. Neuwagen vs. Auto-Abo
             </h2>
-            <p className="text-slate-600 text-sm mt-1">
-              Welche Option passt am besten zu Ihren Flexibilitäts- und Budget-Anforderungen?
+            <p className="text-slate-600 text-sm">
+              Die drei Mobilitätsmodelle im direkten Gegenüberstellung
             </p>
           </div>
 
@@ -332,10 +398,10 @@ export default function Index() {
               </thead>
               <tbody className="divide-y divide-slate-100 text-slate-700">
                 <tr>
-                  <td className="p-4 font-bold bg-slate-50">Lieferzeit</td>
-                  <td className="p-4 font-semibold text-emerald-700">Sofort (wenige Tage)</td>
-                  <td className="p-4 text-slate-600">3 bis 12 Monate</td>
-                  <td className="p-4 text-slate-600">1 bis 4 Wochen</td>
+                  <td className="p-4 font-bold bg-slate-50">Lieferzeit / Verfügbarkeit</td>
+                  <td className="p-4 font-semibold text-emerald-700">Sofort nach Genehmigung durch Leasinggeber</td>
+                  <td className="p-4 text-slate-600">Oft 3 bis 12 Monate (Bestellfahrzeug)</td>
+                  <td className="p-4 text-slate-600">Abhängig von Anbieter &amp; Prüfung</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold bg-slate-50">Vertragslaufzeit</td>
@@ -345,19 +411,19 @@ export default function Index() {
                 </tr>
                 <tr>
                   <td className="p-4 font-bold bg-slate-50">Sonderzahlung / Anzahlung</td>
-                  <td className="p-4 font-semibold text-emerald-700">In der Regel 0 €</td>
-                  <td className="p-4 text-slate-600">Oft mehrere tausend Euro</td>
-                  <td className="p-4 text-slate-600">Keine (Startgebühr)</td>
+                  <td className="p-4 font-semibold text-emerald-700">Abhängig von Vereinbarung (oft 0 €)</td>
+                  <td className="p-4 text-slate-600">Je nach Angebot (0 € bis mehrere 1.000 €)</td>
+                  <td className="p-4 text-slate-600">Keine (oft Startgebühr)</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold bg-slate-50">Monatliche Kosten</td>
-                  <td className="p-4 font-semibold text-emerald-700">Sehr günstig (Altraten)</td>
-                  <td className="p-4 text-slate-600">Mittel bis hoch</td>
-                  <td className="p-4 text-slate-600">Sehr hoch (All-inclusive)</td>
+                  <td className="p-4 font-semibold text-emerald-700">Basierend auf bestehendem Vertrag</td>
+                  <td className="p-4 text-slate-600">Aktuelle Markt-Leasingrate</td>
+                  <td className="p-4 text-slate-600">Höhere Rate (All-inclusive)</td>
                 </tr>
                 <tr>
                   <td className="p-4 font-bold bg-slate-50">Einmalgebühr Umschreibung</td>
-                  <td className="p-4 text-slate-700">ca. 200 € – 600 €</td>
+                  <td className="p-4 text-slate-700">Beim Leasinggeber zu erfragen</td>
                   <td className="p-4 text-slate-600">Überführungskosten (800–1.200 €)</td>
                   <td className="p-4 text-slate-600">Keine oder Startpaket</td>
                 </tr>
@@ -374,7 +440,7 @@ export default function Index() {
             Leasingbanken in Deutschland im Überblick
           </h2>
           <p className="text-slate-600 text-sm mt-1">
-            Wichtige Regelungen &amp; Umschreibungsbedingungen der führenden Autobanken
+            Wichtige Regelungen &amp; Bedingungen führender Autobanken (Orientierungswerte ohne Gewähr)
           </p>
         </div>
 
@@ -383,38 +449,38 @@ export default function Index() {
             {
               name: "Volkswagen Financial Services (VWFS)",
               brands: "VW, Audi, SEAT, CUPRA, Škoda",
-              fee: "ca. 300 € – 450 €",
-              rule: "Gewerbliche und private Vertragsübernahmen sind nach Bonitätsprüfung möglich."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "WICHTIGER HINWEIS: Laut offizieller Erklärung der VWFS ist die Leasingübernahme auf Privatpersonen derzeit ausgeschlossen. Übertragungen sind vorrangig im gewerblichen Bereich (Gewerbe-zu-Gewerbe) oder nach individueller Prüfung möglich."
             },
             {
               name: "BMW Bank",
               brands: "BMW, MINI",
-              fee: "ca. 400 € – 550 €",
-              rule: "Standardisierter Antrag. Übernahme erst ab mindestens 6 Monaten Restlaufzeit."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "Standardisierter Antrag. Übernahme unter Vorbehalt positiver Bonitätsprüfung möglich."
             },
             {
               name: "Mercedes-Benz Bank",
               brands: "Mercedes-Benz, Smart",
-              fee: "ca. 350 € – 500 €",
-              rule: "Umschreibung erfordert vollständige Selbstauskunft & Einkommensnachweise."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "Umschreibung erfordert vollständige Selbstauskunft & Einkommensnachweise des Nachfolgers."
             },
             {
               name: "Santander Consumer Bank",
               brands: "Multimarken",
-              fee: "ca. 250 € – 400 €",
-              rule: "Flexible Übertragungsbedingungen für Privat- und Geschäftskunden."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "Übertragungsbedingungen für Privat- und Geschäftskunden nach Bankprüfung."
             },
             {
               name: "Stellantis Financial Services",
               brands: "Opel, Peugeot, Citroën, Fiat",
-              fee: "ca. 300 € – 450 €",
-              rule: "Vertragsübertragung muss direkt beim ausliefernden Händler beantragt werden."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "Vertragsübertragung muss beim zuständigen Vertragshändler beantragt werden."
             },
             {
-              name: "Tesla Financial Services / Banken",
+              name: "Tesla Financial Services / CA Auto Bank",
               brands: "Tesla Model 3, Y, S, X",
-              fee: "ca. 350 € – 500 €",
-              rule: "App-gestützte Beantragung oder Partnerbank-Prüfung (z. B. CA Auto Bank)."
+              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
+              rule: "Abwicklung über den zuständigen Leasing- beziehungsweise Finanzierungspartner."
             }
           ].map((bank, i) => (
             <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
@@ -429,6 +495,22 @@ export default function Index() {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-8 bg-slate-100 p-5 rounded-2xl border border-slate-200 text-xs text-slate-600 space-y-2">
+          <strong className="text-slate-900 font-bold block text-xs uppercase tracking-wider flex items-center gap-1.5">
+            <FileText className="w-4 h-4 text-amber-600" />
+            <span>Transparenzhinweis zu Umschreibungsgebühren:</span>
+          </strong>
+          <p className="leading-relaxed">
+            Die Umschreibungsgebühren und Bedingungen variieren je nach Leasinggesellschaft, Kundengruppe (Privat- oder Gewerbekunde) und Ausgestaltung des Ursprungsvertrags. Die Umschreibungsgebühr bitte beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen.
+          </p>
+          <div className="pt-1">
+            <Link to="/kosten-gebuehren" className="inline-flex items-center gap-1.5 text-amber-700 font-bold hover:text-amber-800 underline text-xs">
+              <span>Weitere Details in unserer Gebühren-Übersicht</span>
+              <ChevronRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -455,7 +537,7 @@ export default function Index() {
                     VW Golf 8 Leasingübernahme
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Life, Style, GTI, GTE &amp; R. Details zur Umschreibung über die Volkswagen Bank (VWFS) ab 199 €/Monat.
+                    Life, Style, GTI, GTE &amp; R. Details zur Umschreibung und den Richtlinien der Volkswagen Bank (VWFS).
                   </p>
                 </div>
                 <div className="text-amber-700 font-bold text-xs pt-4 flex items-center gap-1">
@@ -523,7 +605,7 @@ export default function Index() {
                     Kündigung vs. Übernahme
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Der große Vergleich: Warum vorzeitige Leasingkündigungen tausende Euro kosten und Übernahmen 80 % sparen.
+                    Der große Vergleich: Warum vorzeitige Leasingkündigungen erhebliche Stornokosten verursachen können und wann eine Übernahme die wirtschaftlichere Alternative ist.
                   </p>
                 </div>
                 <div className="text-amber-700 font-bold text-xs pt-4 flex items-center gap-1">
@@ -540,7 +622,7 @@ export default function Index() {
                     Privat an Gewerbe (&amp; umgekehrt)
                   </h3>
                   <p className="text-xs text-slate-600 leading-relaxed">
-                    Steuerliche Behandlung, 19 % Vorsteuerabzug, 1%-Regelung und Dokumentationspflichten beim Vertragswechsel.
+                    Steuerliche Behandlung, Vorsteuerabzug, 1%-Regelung und Dokumentationspflichten beim Vertragswechsel.
                   </p>
                 </div>
                 <div className="text-amber-700 font-bold text-xs pt-4 flex items-center gap-1">
@@ -553,7 +635,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* E-E-A-T EDITORIAL & QUALITY ASSURANCE BOX */}
+      {/* EDITORIAL & QUALITY ASSURANCE BOX */}
       <section className="py-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-slate-100/90 rounded-2xl border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
           <div className="w-14 h-14 rounded-full bg-amber-500 text-slate-950 font-extrabold flex items-center justify-center text-xl shrink-0 shadow">
@@ -562,15 +644,15 @@ export default function Index() {
           <div className="space-y-1 flex-1 text-xs text-slate-600">
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
               <strong className="text-slate-900 font-bold text-sm">Fachredaktion Leasingübernahme.de</strong>
-              <span className="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900 font-bold text-[10px]">
-                Geprüfte Rechtslage: September 2026
+              <span className="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-950 border border-amber-300 font-extrabold text-[10px]">
+                Fachratgeber Mobilität &amp; Vertragsrecht
               </span>
             </div>
             <p className="leading-relaxed">
-              Dieser Ratgeber wurde von unserer Fachredaktion für Mobilität und Vertragsrecht (§§ 414, 415 BGB) erstellt. Alle Konditionen, Bankgebühren und Umschreibungsprozesse werden monatlich mit den Richtlinien der führenden deutschen Automobilbanken abgeglichen.
+              Dieser Ratgeber wurde von unserer Fachredaktion für Mobilität und Vertragsrecht (§§ 414, 415 BGB) zusammengestellt. Alle Angaben zu Bankgebühren und Umschreibungsprozessen basieren auf öffentlich zugänglichen Informationen der Leasinganbieter und dienen der allgemeinen Orientierung.
             </p>
             <div className="pt-1 flex flex-wrap justify-center sm:justify-start gap-4 text-[11px] text-slate-500 font-semibold">
-              <span>Rechtsquellen: BGB, Preisverzeichnisse VWFS, BMW Bank, Mercedes-Benz Bank</span>
+              <span>Rechtsquellen: BGB, Preis- &amp; Leistungsverzeichnisse der Leasingbanken</span>
             </div>
           </div>
         </div>

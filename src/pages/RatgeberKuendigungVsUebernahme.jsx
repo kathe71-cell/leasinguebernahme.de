@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Scale, AlertTriangle, CheckCircle2, ChevronRight, DollarSign, Calculator } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberKuendigungVsUebernahme() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="Vorzeitige Leasing-Kündigung vs. Übernahme | Kosten & Ratgeber"
+        description="Vorzeitige Leasing-Kündigung kostenintensiv abwenden: Vergleichen Sie Vorfälligkeitsentschädigung, Gebühren und die Rettung per Leasingübernahme."
+        canonicalPath="/leasingvertrag-vorzeitig-kuendigen"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -19,21 +25,21 @@ export default function RatgeberKuendigungVsUebernahme() {
             Vorzeitige Leasing-Kündigung vs. Leasingübernahme
           </h1>
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
-            Warum die vorzeitige Kündigung eines Leasingvertrags tausende Euro kosten kann und wie die Vertragsübernahme bis zu 80 % der Ausstiegskosten spart.
+            Warum die vorzeitige Kündigung eines Leasingvertrags tausende Euro kosten kann und wie eine Vertragsübernahme eine wirtschaftliche Alternative bietet.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200 text-slate-800 border border-slate-300 text-xs font-bold">
             <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+            <span>Redaktioneller Ausstiegs-Vergleich</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
         <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
           <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Kernfakten auf einen Blick (Google AI Snippet)
+            Kompaktvergleich: Kündigung vs. Übernahme
           </span>
           <p className="font-medium">
-            Ein vorzeitiger Leasingausstieg durch Kündigung erfordert das Einverständnis der Leasingbank und löst eine Vorfälligkeitsentschädigung sowie Ausgleichszahlungen von meist 3.000 € bis über 8.000 € aus. Bei einer Leasingübernahme zahlt der Leasingnehmer lediglich die Bank-Umschreibungsgebühr von 300 € bis 550 €, da der Nachfolger den Vertrag 1:1 fortführt.
+            Ein vorzeitiger Leasingausstieg durch Kündigung erfordert das Einverständnis der Leasingbank und löst eine Vorfälligkeitsentschädigung sowie Ausgleichszahlungen aus. Bei einer Leasingübernahme zahlt der Leasingnehmer im Erfolgsfall lediglich die vereinbarte Bearbeitungs- oder Umschreibungsgebühr der Bank, sofern ein Nachfolger den Vertrag 1:1 fortführt.
           </p>
         </div>
 
@@ -59,7 +65,7 @@ export default function RatgeberKuendigungVsUebernahme() {
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Kostenaufwand</td>
                   <td className="p-3.5 text-red-700 font-bold">3.000 € bis 10.000 €+</td>
-                  <td className="p-3.5 text-emerald-700 font-bold">300 € bis 550 € (Bankgebühr)</td>
+                  <td className="p-3.5 text-emerald-700 font-bold">Beim Leasinggeber zu erfragen</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Zustimmung der Bank</td>
@@ -78,8 +84,8 @@ export default function RatgeberKuendigungVsUebernahme() {
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Dauer der Abwicklung</td>
-                  <td className="p-3.5">4 bis 12 Wochen (zähe Verhandlungen)</td>
-                  <td className="p-3.5">1 bis 3 Wochen (Formularprozess)</td>
+                  <td className="p-3.5">Verhandlungsabhängig (Kulanzentscheidung)</td>
+                  <td className="p-3.5">Nach erfolgreicher Bankprüfung und Vertragsübernahme</td>
                 </tr>
               </tbody>
             </table>

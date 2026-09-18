@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Calculator, CheckCircle2, ChevronRight, Car, Info, Award } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function ModellGolf() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="VW Golf 8 Leasingübernahme | Ablauf & VWFS Bestimmungen"
+        description="Leitfaden zur Leasingübernahme von VW Golf 8 Modellen über die Volkswagen Financial Services (VWFS). Bearbeitungsgebühren und Voraussetzungen."
+        canonicalPath="/vw-golf-leasinguebernahme"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -23,20 +29,23 @@ export default function ModellGolf() {
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
             Alles zur vorzeitigen Übernahme laufender VW Golf 8 Leasingverträge (Life, Style, R-Line, GTI, GTE &amp; Variant) über die Volkswagen Financial Services AG.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
-            <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-950 border border-amber-300 text-xs font-extrabold">
+            <CheckCircle2 className="w-3.5 h-3.5 text-amber-600" />
+            <span>Fachratgeber Mobilität &amp; Vertragsrecht</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
-        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Definition auf den Punkt (Google AI Snippet)
+        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block">
+            Wichtiger Hinweis &amp; Definition: VW Golf Leasingübernahme
           </span>
           <p className="font-medium">
-            Die VW Golf Leasingübernahme ermöglicht es einem Nachfolger, den laufenden Vertrag eines VW Golf 8 zu bestehenden Raten ohne Sonderzahlung von einem Vorbesitzer zu übernehmen. Die formale Genehmigung erfolgt über die Volkswagen Bank (VWFS) bei einer Bearbeitungsgebühr von rund 300 € bis 450 €.
+            Die VW Golf Leasingübernahme ermöglicht den Eintritt in einen bestehenden Vertrag für einen VW Golf 8 zu vereinbarten Konditionen. Die Umschreibung bedarf der Genehmigung der Volkswagen Bank (VWFS); die Gebühr ist beim Leasinggeber für den konkreten Vertrag zu erfragen.
           </p>
+          <div className="bg-rose-100/80 p-2.5 rounded-lg text-xs text-rose-950 font-semibold border border-rose-200">
+            <strong>Einschränkung der VWFS:</strong> Laut offizieller Erklärung der Volkswagen Financial Services sind Vertragsübernahmen auf <strong>Privatpersonen ausgeschlossen</strong> (vorrangig Gewerbe-zu-Gewerbe).
+          </div>
         </div>
 
         <AdSenseBanner slot="9000000001" className="bg-white" />
@@ -48,7 +57,7 @@ export default function ModellGolf() {
             VW Golf 8 Varianten in der Leasingübernahme
           </h2>
           <p className="text-slate-700 text-sm leading-relaxed">
-            Aufgrund der hohen Stückzahlen ist der Golf 8 das meistgesuchte Fahrzeug für Vertragsübernahmen. Hier sind die typischen Marktdaten im Überblick:
+            Aufgrund der hohen Stückzahlen ist der Golf 8 das meistgesuchte Fahrzeug für Vertragsübernahmen. Nachfolgend beispielhafte Szenarien zur Illustration:
           </p>
 
           <div className="overflow-x-auto">
@@ -56,8 +65,8 @@ export default function ModellGolf() {
               <thead>
                 <tr className="bg-slate-900 text-white">
                   <th className="p-3 font-bold">Modellvariante</th>
-                  <th className="p-3 font-bold">Typische Neu-Leasingrate</th>
-                  <th className="p-3 font-bold text-amber-400">Typische Übernahmerate</th>
+                  <th className="p-3 font-bold">Beispielhafte Neu-Rate*</th>
+                  <th className="p-3 font-bold text-amber-400">Beispielhafte Übernahmerate*</th>
                   <th className="p-3 font-bold">Bank</th>
                 </tr>
               </thead>
@@ -89,6 +98,9 @@ export default function ModellGolf() {
               </tbody>
             </table>
           </div>
+          <p className="text-[11px] text-slate-500 italic">
+            * Modellrechnung zur Illustration: Die tatsächliche Höhe der Raten, Ersparnisse und Laufzeiten hängt vom konkreten Erstvertrag, der Ausstattung, dem Restwert und der Bonitätsprüfung der Leasingbank ab.
+          </p>
         </div>
 
         {/* Ablauf Box */}
@@ -98,10 +110,10 @@ export default function ModellGolf() {
             Schritt-für-Schritt Ablauf bei Volkswagen Financial Services
           </h2>
           <ol className="list-decimal list-inside space-y-2 text-sm text-slate-700 font-medium">
-            <li><strong>Vertragsprüfung:</strong> Vorbesitzer prüft die Mindestrestlaufzeit (mind. 6 Monate) und verbleibende Kilometer.</li>
-            <li><strong>Formular anfordern:</strong> Antrag auf Vertragsübernahme bei der Volkswagen Bank / Audi Leasing herunterladen.</li>
-            <li><strong>Bonitätsauskunft einreichen:</strong> Übernehmer reicht Gehaltsnachweise (3 Monate) und Schufa-Zustimmung ein.</li>
-            <li><strong>Genehmigung &amp; Umschreibung:</strong> Nach Prüfung (ca. 7–10 Werktage) unterzeichnen Vorbesitzer, Neukunde und VWFS.</li>
+            <li><strong>Vertragsprüfung:</strong> Vorbesitzer prüft die verbleibende Vertragslaufzeit und das verbleibende Kilometerbudget.</li>
+            <li><strong>Formular anfordern:</strong> Antrag auf Vertragsübernahme bei der Volkswagen Bank / Audi Leasing anfordern.</li>
+            <li><strong>Bonitätsauskunft einreichen:</strong> Übernehmer reicht Gehaltsnachweise und Schufa-Zustimmung ein.</li>
+            <li><strong>Genehmigung &amp; Umschreibung:</strong> Nach erfolgreicher Bonitätsprüfung durch die Leasingbank unterzeichnen Vorbesitzer, Neukunde und VWFS.</li>
             <li><strong>Übergabe mit Protokoll:</strong> Detailliertes Festhalten von Vorschäden, Profiltiefe und exaktem Übergabe-Kilometerstand.</li>
           </ol>
         </div>

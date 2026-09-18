@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, DollarSign, FileText, ArrowRight, ChevronRight, CheckCircle2 } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function MarkeMercedes() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Mercedes-Benz Leasingübernahme | Umschreibung & MBFS Ablauf"
+        description="Leitfaden zur Mercedes-Benz Leasingübernahme über die Mercedes-Benz Bank AG: Umschreibungsgebühren, Voraussetzungen für Privat & Gewerbe sowie Ablauf."
+        canonicalPath="/marke-mercedes"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -38,8 +44,8 @@ export default function MarkeMercedes() {
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
               <strong className="text-slate-900 font-bold block text-sm">Die wichtigsten Daten auf einen Blick:</strong>
               <ul className="list-disc list-inside space-y-1 text-xs text-slate-700">
-                <li><strong>Umschreibungsgebühr:</strong> ca. 350 € bis 500 € inkl. MwSt. (wird i. d. R. dem Übernehmer oder bisherigen Halter in Rechnung gestellt).</li>
-                <li><strong>Mindestrestlaufzeit:</strong> Üblicherweise mindestens 6 Monate Restvertragszeit.</li>
+                <li><strong>Umschreibungsgebühr:</strong> Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen.</li>
+                <li><strong>Mindestrestlaufzeit:</strong> Vom jeweiligen Anbieter geforderte Restlaufzeit (vertragsabhängig).</li>
                 <li><strong>Bonitätsnachweis:</strong> Schufa-Auskunft, die letzten 3 Gehaltsabrechnungen oder aktuelle BWA bei Selbstständigen.</li>
                 <li><strong>Vertragskonditionen:</strong> Monatsrate, vereinbarte Kilometer und Restwert bleiben unverändert bestehen.</li>
               </ul>
@@ -59,7 +65,7 @@ export default function MarkeMercedes() {
             <ol className="list-decimal list-inside space-y-2 font-medium text-slate-800">
               <li><strong>Antragsanforderung:</strong> Der aktuelle Leasingnehmer kontaktiert das Mercedes-Benz Kundencenter und fordert das Umschreibungsformular an.</li>
               <li><strong>Selbstauskunft & Unterlagen:</strong> Der Neukunde füllt die Bonitäts-Selbstauskunft aus und reicht seine Gehaltsnachweise ein.</li>
-              <li><strong>Prüfung durch Mercedes-Benz Bank:</strong> Die Bank führt eine Bonitätsprüfung durch (Bearbeitungszeit ca. 1 bis 2 Wochen).</li>
+              <li><strong>Prüfung durch Mercedes-Benz Bank:</strong> Die Bank führt eine Bonitätsprüfung nach Eingang der vollständigen Unterlagen durch.</li>
               <li><strong>Umschreibungsvertrag:</strong> Nach Bewilligung unterzeichnen Alt- und Neukunde den dreiseitigen Übernahmevertrag.</li>
               <li><strong>Fahrzeugübergabe:</strong> Fahrzeugübergabe mit detailliertem Protokoll, Dokumentation der Stichtags-Kilometer und Ummeldung bei der Zulassungsstelle.</li>
             </ol>

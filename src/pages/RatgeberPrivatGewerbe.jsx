@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, FileText, CheckCircle2, ChevronRight, DollarSign } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberPrivatGewerbe() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <SEOHead 
+        title="Leasingübernahme Privat an Gewerbe | Steuer & MwSt. Ratgeber"
+        description="Leasingübernahme von Privat an Gewerbe (und umgekehrt): Vorsteuerabzug, Betriebsausgaben, Bonitätsnachweise und herstellerspezifische Einschränkungen."
+        canonicalPath="/leasinguebernahme-privat-an-gewerbe"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Breadcrumb & Header */}
@@ -21,19 +27,22 @@ export default function RatgeberPrivatGewerbe() {
           <p className="mt-3 text-slate-600 text-base leading-relaxed">
             Steuerliche Behandlung, Vorsteuerabzug, Bonitätsnachweise und Fallstricke bei der Vertragsübernahme zwischen Privatpersonen und Unternehmen.
           </p>
-          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-300 text-xs font-bold">
+          <div className="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200 text-slate-800 border border-slate-300 text-xs font-bold">
             <CheckCircle2 className="w-3.5 h-3.5" />
-            <span>Stand: September 2026 | Geprüfte Rechtslage</span>
+            <span>Redaktioneller Steuer-Ratgeber</span>
           </div>
         </div>
 
         {/* Position 0 Definition Box */}
-        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed">
-          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block mb-1">
-            Wichtigste Steuer-Regel (Google AI Snippet)
+        <div className="bg-amber-50/80 border-l-4 border-amber-500 p-5 rounded-r-2xl shadow-sm text-slate-800 text-sm leading-relaxed space-y-2">
+          <span className="text-[10px] font-extrabold uppercase tracking-widest text-amber-800 block">
+            Steuerliche Grundregel: Leasingübernahme
           </span>
           <p className="font-medium">
             Bei einer Leasingübernahme von Privat an Gewerbe wird der Vertrag auf das Unternehmen umgeschrieben, wodurch die monatlichen Leasingraten als Betriebsausgaben absetzbar werden und zum Vorsteuerabzug (19 % MwSt.) berechtigen. Bei der Übernahme von Gewerbe an Privat müssen Brutto-Raten bezahlt werden und der Vorsteuerabzug entfällt.
+          </p>
+          <p className="text-xs text-slate-600 italic">
+            Hinweis: Einzelne Leasingbanken (z. B. VWFS) schließen Übernahmen auf Privatpersonen grundsätzlich aus.
           </p>
         </div>
 

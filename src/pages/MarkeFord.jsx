@@ -2,10 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, DollarSign, FileText, ArrowRight, ChevronRight, Info } from "lucide-react";
 import AdSenseBanner from "@/components/AdSenseBanner";
+import SEOHead from "@/components/SEOHead";
 
 export default function MarkeFord() {
   return (
     <div className="bg-slate-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8">
+      <SEOHead 
+        title="Ford Leasingübernahme | Umschreibungsgebühren & Ford Bank Ablauf"
+        description="Leitfaden zur Ford Leasingübernahme über die Ford Bank (Ford Credit): Umschreibungsgebühren, Voraussetzungen & Abwicklungsdauer."
+        canonicalPath="/marke-ford"
+      />
       <div className="max-w-4xl mx-auto space-y-10">
         
         {/* Header */}
@@ -38,8 +44,8 @@ export default function MarkeFord() {
             <div className="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-2">
               <strong className="text-slate-900 font-bold block text-sm">Die wichtigsten Daten auf einen Blick:</strong>
               <ul className="list-disc list-inside space-y-1 text-xs text-slate-700">
-                <li><strong>Umschreibungsgebühr:</strong> ca. 300 € bis 450 € inkl. MwSt.</li>
-                <li><strong>Mindestrestlaufzeit:</strong> In der Regel mindestens 6 Monate.</li>
+                <li><strong>Umschreibungsgebühr:</strong> Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen.</li>
+                <li><strong>Mindestrestlaufzeit:</strong> Vom jeweiligen Anbieter geforderte Restlaufzeit (vertragsabhängig).</li>
                 <li><strong>Bonitätsprüfung:</strong> Positive Schufa sowie Gehaltsnachweise (Arbeitnehmer) bzw. BWA/EÜR (Gewerbe).</li>
                 <li><strong>Konditionen:</strong> Die vereinbarte Leasingrate und die jährliche Kilometerleistung bleiben unverändert.</li>
               </ul>
@@ -59,7 +65,7 @@ export default function MarkeFord() {
             <ol className="list-decimal list-inside space-y-2 font-medium text-slate-800">
               <li><strong>Antrag anfordern:</strong> Der bisherige Leasingnehmer fordert die Umschreibungsunterlagen bei der Ford Bank GmbH (Ford Credit) an.</li>
               <li><strong>Unterlagen einreichen:</strong> Der Übernehmer füllt die Selbstauskunft aus und legt seine Bonitätsunterlagen bei.</li>
-              <li><strong>Prüfung durch die Bank:</strong> Die Leasingbank prüft die Kreditwürdigkeit (Dauer ca. 1 bis 2 Wochen).</li>
+              <li><strong>Prüfung durch die Bank:</strong> Die Leasingbank prüft die Kreditwürdigkeit nach Eingang aller Antragsunterlagen.</li>
               <li><strong>Vertrag unterschreiben:</strong> Nach Genehmigung unterschreiben Alt- und Neukunde die offizielle Schuldübernahme.</li>
               <li><strong>Fahrzeugübergabe:</strong> Durchführung der Übergabe mit detailliertem Protokoll und Festhalten des Kilometerstands.</li>
             </ol>
@@ -67,7 +73,7 @@ export default function MarkeFord() {
             <div className="mt-4 p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-slate-800 flex gap-2">
               <Info className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
               <div>
-                <strong>Praxis-Hinweis:</strong> Die Ford Bank prüft die Bonität meist innerhalb von 7 bis 10 Werktagen.
+                <strong>Praxis-Hinweis:</strong> Die Prüfung der Unterlagen erfolgt durch die Ford Bank nach vollständigem Eingang aller Antragsdokumente.
               </div>
             </div>
           </div>
