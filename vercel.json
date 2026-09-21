@@ -29,5 +29,18 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "xn--leasingbernahme-5vb.de"
+        }
+      ],
+      "destination": "https://www.xn--leasingbernahme-5vb.de/$1",
+      "permanent": true
+    }
   ]
 }
