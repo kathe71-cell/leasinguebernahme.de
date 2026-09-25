@@ -42,7 +42,7 @@ export default function Index() {
             
             <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Das unabhängige Fachportal &amp; Ratgeber</span>
+              <span>Das unabhängige Informationsportal &amp; Ratgeber</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">

@@ -49,7 +49,7 @@ export default function Layout({ children }) {
                   Leasingübernahme<span className="text-amber-600">.de</span>
                 </span>
                 <span className="text-[10px] text-slate-500 font-medium -mt-1 tracking-wider uppercase">
-                  Das unabhängige Fachportal
+                  Das unabhängige Informationsportal
                 </span>
               </div>
             </Link>
@@ -178,7 +178,7 @@ export default function Layout({ children }) {
                 </span>
               </div>
               <p className="text-slate-400 text-sm leading-relaxed max-w-md">
-                Ihr unabhängiges Fachportal &amp; Informations-Ratgeber für Leasingübernahme, Vertragsweitergabe und Gebrauchtwagen-Leasing in Deutschland.
+                Ihr unabhängiges Informationsportal &amp; Informations-Ratgeber für Leasingübernahme, Vertragsweitergabe und Gebrauchtwagen-Leasing in Deutschland.
               </p>
 
               {/* Disclosure Note */}

@@ -8,7 +8,7 @@ export default function Impressum() {
     <div className="min-h-screen bg-slate-50 py-12 px-4 sm:px-6 lg:px-8">
       <SEOHead 
         title="Impressum | Leasingübernahme.de"
-        description="Rechtliche Angaben und Impressum gemäß § 5 DDG sowie § 18 MStV für das unabhängige Informations- und Fachportal Leasingübernahme.de."
+        description="Rechtliche Angaben und Impressum gemäß § 5 DDG sowie § 18 MStV für das unabhängige Informationsportal Leasingübernahme.de."
         canonicalPath="/impressum"
       />
       <div className="max-w-4xl mx-auto space-y-8">
@@ -59,11 +59,6 @@ export default function Impressum() {
               </div>
             </div>
 
-            <div className="pt-3 border-t border-slate-100">
-              <span className="inline-block bg-slate-100 text-slate-800 border border-slate-300 font-bold text-xs px-3 py-1.5 rounded-full">
-                Kleinunternehmer nach § 19 UStG (kein Ausweis der Umsatzsteuer)
-              </span>
-            </div>
           </CardContent>
         </Card>
 

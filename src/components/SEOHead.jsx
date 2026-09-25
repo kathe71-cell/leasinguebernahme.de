@@ -66,7 +66,7 @@ export default function SEOHead({
     "name": "Leasingübernahme.de",
     "url": BASE_DOMAIN,
     "logo": `${BASE_DOMAIN}/favicon.svg`,
-    "description": "Unabhängiger Ratgeber und Fachportal für Leasingübernahmen in Deutschland"
+    "description": "Unabhängiger Ratgeber und Informationsportal für Leasingübernahmen in Deutschland"
   };
 
   const websiteData = {
