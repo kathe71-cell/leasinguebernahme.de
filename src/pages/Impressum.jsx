@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Building, Mail, MapPin, Phone, ShieldCheck, Scale, AlertCircle } from "lucide-react";
+import { Building, Mail, MapPin, ShieldCheck, Scale, AlertCircle } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 export default function Impressum() {
@@ -49,12 +49,6 @@ export default function Impressum() {
                 <Mail className="w-5 h-5 text-slate-400 flex-shrink-0" />
                 <a href="mailto:jens@kathe.org" className="text-amber-700 hover:text-amber-800 font-semibold underline">
                   jens@kathe.org
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-slate-400 flex-shrink-0" />
-                <a href="tel:+491786652623" className="text-amber-700 hover:text-amber-800 font-semibold">
-                  +49 178 6652623
                 </a>
               </div>
             </div>

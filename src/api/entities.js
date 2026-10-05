@@ -18,7 +18,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Sehr gepflegtes Langstreckenfahrzeug in Mythenschwarz Metalllic. S line Sportpaket, Panorama-Glasdach, Matrix-LED-Scheinwerfer und Bang & Olufsen Sound. Übernahme ab sofort möglich ohne Umschreibungsgebühr.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/101",
     images: ["https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-15T10:00:00Z"
@@ -40,7 +40,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "BMW 320i Touring in Portimao Blau. M Sportpaket, Curved Display, Live Cockpit Professional, Head-Up Display. Gewerblicher Leasingvertrag mit 15.000 km/Jahr.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/102",
     images: ["https://images.unsplash.com/photo-1555215695-3004980ad54e?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-18T14:30:00Z"
@@ -62,7 +62,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Top ausgestatteter VW Golf 8 R-Line in Lapiz Blue. Innovision Cockpit, IQ.LIGHT LED-Matrix-Scheinwerfer, Standheizung und Rückfahrkamera.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/103",
     images: ["https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-20T09:15:00Z"
@@ -84,7 +84,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Mercedes C-Klasse T-Modell AMG Line in Spektralblau metallic. Burmester Surround-Soundsystem, MBUX Premium, Fahrassistenz-Paket Plus.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/104",
     images: ["https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-22T11:20:00Z"
@@ -106,7 +106,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Tesla Model 3 Long Range Dual Motor in Pearl White. Premium-Innenraum schwarz, Autopilot, 19-Zoll Sport-Felgen, Wärmepumpe.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/105",
     images: ["https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-25T16:45:00Z"
@@ -128,7 +128,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Cupra Formentor VZ mit 310 PS in Petrol Blue Matt. Brembo-Bremse, Beats Audio, Sportsitze in Leder Petrol Blue, 19-Zoll Kupfer-Felgen.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/106",
     images: ["https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-01-28T13:10:00Z"
@@ -150,7 +150,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Skoda Octavia Combi RS in Mamba-Grün. Matrix-LED, Canton Soundsystem, Head-up-Display, Anhängerkupplung schwenkbar.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/107",
     images: ["https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-01T08:30:00Z"
@@ -172,7 +172,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "800V Ultra-Schnellladen. Hyundai Ioniq 5 UNIQ-Paket mit Solar-Dach, Bose Sound, Relax-Sitzen und AR-Head-Up Display.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/108",
     images: ["https://images.unsplash.com/photo-1563720223185-11003d516935?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-03T15:00:00Z"
@@ -194,7 +194,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Porsche Taycan 4S in Vulkangrau Metallic. Performance-Batterie Plus, Sport Chrono Paket, Hinterachslenkung, Passenger Display.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/109",
     images: ["https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-05T12:00:00Z"
@@ -216,7 +216,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Ford Kuga Vollhybrid ST-Line X. B&O Sound System, Fahrassistenz-Paket, LED-Scheinwerfer, Winter-Paket.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/110",
     images: ["https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-08T09:40:00Z"
@@ -238,7 +238,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Opel Astra Kette Kombi in Kult-Gelb mit schwarzem Dach. Pure Panel Pro Cockpit, Intelli-Lux LED Pixel Licht, AGR-Ergonomiesitze.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/111",
     images: ["https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-10T14:15:00Z"
@@ -260,7 +260,7 @@ const INITIAL_VEHICLES = [
     status: "aktiv",
     description: "Volvo XC60 Plug-in Hybrid mit 350 PS Systemleistung in Onyx Black. Harman Kardon Sound, Google Infotainment, Panorama Schiebedach.",
     contact_email: "jens@kathe.org",
-    contact_phone: "+49 178 6652623",
+    contact_phone: "",
     external_url: "https://leasingübernahme.de/details/112",
     images: ["https://images.unsplash.com/photo-1502877338535-766e1452684a?w=800&auto=format&fit=crop&q=80"],
     created_at: "2025-02-12T16:00:00Z"

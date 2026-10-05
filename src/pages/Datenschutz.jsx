@@ -39,7 +39,6 @@ export default function Datenschutz() {
               <p className="font-bold text-base">Jens Kathe</p>
               <p>Vollständige Anschrift und Kontaktdaten siehe <a href="/Impressum" className="text-amber-700 underline font-semibold">Impressum</a>.</p>
               <p>E-Mail: <a href="mailto:jens@kathe.org" className="text-amber-700 underline font-semibold">jens@kathe.org</a></p>
-              <p>Telefon: <a href="tel:+491786652623" className="text-amber-700 font-semibold">+49 178 6652623</a></p>
             </div>
           </CardContent>
         </Card>
