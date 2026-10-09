@@ -14,7 +14,6 @@ import {
 } from "lucide-react";
 
 import ScrollToTop from "../components/ScrollToTop";
-import CookieBanner from "../components/CookieBanner";
 import SkipLinks from "../components/SkipLinks";
 
 export default function Layout({ children }) {
@@ -170,32 +169,32 @@ export default function Layout({ children }) {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
             
             {/* Brand Column */}
-            <div className="col-span-1 md:col-span-2 space-y-4">
+            <div className="col-span-1 space-y-4">
               <div className="flex items-center space-x-3">
                 <BrandLogo className="w-10 h-10" />
                 <span className="text-xl font-extrabold text-white tracking-tight">
                   Leasingübernahme<span className="text-amber-400">.de</span>
                 </span>
               </div>
-              <p className="text-slate-400 text-sm leading-relaxed max-w-md">
-                Ihr unabhängiges Informationsportal &amp; Informations-Ratgeber für Leasingübernahme, Vertragsweitergabe und Gebrauchtwagen-Leasing in Deutschland.
+              <p className="text-slate-400 text-sm leading-relaxed">
+                Ihr unabhängiges Informationsportal &amp; Ratgeber für Leasingübernahme, Vertragsweitergabe und Gebrauchtwagen-Leasing in Deutschland.
               </p>
 
               {/* Disclosure Note */}
               <div className="bg-slate-800/80 p-4 rounded-xl border border-slate-700 text-xs text-slate-400 space-y-1">
                 <p className="font-bold text-amber-400 uppercase tracking-wider text-[11px]">
-                  Rechtlicher Hinweis &amp; Unabhängigkeit
+                  Unabhängigkeit
                 </p>
                 <p>
-                  leasingübernahme.de ist ein rein unabhängiges Informationsportal und steht in keinem gesellschaftsrechtlichen Verhältnis zu den genannten Automobilherstellern, Autohäusern oder Leasinggesellschaften.
+                  Kein gesellschaftsrechtliches Verhältnis zu den genannten Autobanken.
                 </p>
               </div>
             </div>
             
-            {/* Navigation Column */}
+            {/* Basis-Ratgeber Column */}
             <div>
               <h3 className="text-xs font-extrabold text-white tracking-wider uppercase mb-4 text-amber-400">
-                Ratgeber-Themen
+                Basis-Ratgeber
               </h3>
               <ul className="space-y-2.5 text-sm">
                 <li>
@@ -220,12 +219,61 @@ export default function Layout({ children }) {
                 </li>
                 <li>
                   <Link to="/checkliste" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
-                    Übergabeprotokoll Checkliste
+                    Übergabeprotokoll (PDF)
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leasingvertrag-vorzeitig-kuendigen" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Kündigung vs. Übernahme
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Fokus-Themen Column */}
+            <div>
+              <h3 className="text-xs font-extrabold text-white tracking-wider uppercase mb-4 text-amber-400">
+                Fokus-Themen
+              </h3>
+              <ul className="space-y-2.5 text-sm">
+                <li>
+                  <Link to="/leasinguebernahme-risiken" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Risiken &amp; Fallen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leasinguebernahme-trotz-schufa" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Übernahme trotz Schufa?
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leasinguebernahme-elektroauto" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    E-Auto BAFA &amp; THG-Quote
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leasinguebernahme-praemie" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Ausgleichsprämie berechnen
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/leasinguebernahme-privat-an-gewerbe" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Privat an Gewerbe
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/auto-abo-vs-leasinguebernahme" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Auto-Abo vs. Leasing
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/glossar" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
+                    Leasing-Glossar
                   </Link>
                 </li>
                 <li>
                   <Link to="/marken" className="text-slate-400 hover:text-white transition-colors" onClick={handleLinkClick}>
-                    Marken-Ratgeber
+                    Alle Automarken im Detail
                   </Link>
                 </li>
               </ul>
@@ -257,14 +305,6 @@ export default function Layout({ children }) {
                   </Link>
                 </li>
                 <li>
-                  <button 
-                    onClick={() => window.dispatchEvent(new Event("open_cookie_settings"))} 
-                    className="text-slate-400 hover:text-white transition-colors text-left focus:outline-none"
-                  >
-                    Cookie-Einstellungen
-                  </button>
-                </li>
-                <li>
                   <Link 
                     to="/faq" 
                     className="text-slate-400 hover:text-white transition-colors"
@@ -281,10 +321,18 @@ export default function Layout({ children }) {
             <p>&copy; {new Date().getFullYear()} leasingübernahme.de - Alle Rechte vorbehalten.</p>
           </div>
         </div>
-      </footer>
+      
+            <div className="mt-8 p-4 rounded-xl bg-slate-900 border border-slate-800 text-sm text-slate-300">
+              <span className="font-bold text-white block mb-1">Projektübernahme</span>
+              <p className="mb-2">Interesse an der Übernahme von leasinguebernahme.de inklusive Projekt?</p>
+              <a href="/projektuebernahme" className="text-blue-400 hover:text-blue-300 font-medium">
+                Mehr erfahren &rarr;
+              </a>
+            </div>
+
+</footer>
 
       <ScrollToTop />
-      <CookieBanner />
     </div>
   );
 }

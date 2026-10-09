@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { DollarSign, Building2, AlertTriangle, ShieldCheck, FileText, ArrowRight } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function KostenGebuehren() {
@@ -27,7 +26,6 @@ export default function KostenGebuehren() {
           </p>
         </div>
 
-        <AdSenseBanner slot="3000000001" className="bg-white" />
 
         {/* Bank Fees Table */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-6">
@@ -57,39 +55,39 @@ export default function KostenGebuehren() {
                     </span>
                   </td>
                   <td className="p-3.5">VW, Audi, SEAT, CUPRA, Škoda</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.vwfs.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">BMW Bank</td>
                   <td className="p-3.5">BMW, MINI</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.bmwbank.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Mercedes-Benz Bank</td>
                   <td className="p-3.5">Mercedes-Benz, Smart</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.mercedes-benz-bank.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Santander Consumer Bank</td>
                   <td className="p-3.5">Freie Marken / Händler</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.santander.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Stellantis Bank</td>
                   <td className="p-3.5">Opel, Peugeot, Citroën, Fiat</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.stellantis-financial-services.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Sixt Neuwagen / LeasePlan</td>
                   <td className="p-3.5">Gewerbe &amp; Flotten</td>
-                  <td className="p-3.5 font-bold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3.5 font-bold"><a href="https://www.ayvens.com/de-de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
               </tbody>
             </table>
           </div>
 
           <p className="text-[11px] text-slate-500 italic">
-            * Hinweis: Die Umschreibungsgebühr bitte beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen. Gebühren werden je nach Kundengruppe (Privat / Gewerbe) und Vertragsmodell vom Leasinggeber individuell festgelegt.
+            * Hinweis: Die Gebühr beträgt erfahrungsgemäß ca. 250 € - 500 €. Gebühren werden je nach Kundengruppe (Privat / Gewerbe) und Vertragsmodell vom Leasinggeber individuell festgelegt.
           </p>
 
           <div className="bg-amber-50 border border-amber-200 p-4 rounded-xl text-slate-900 text-xs leading-relaxed space-y-1">
@@ -100,7 +98,6 @@ export default function KostenGebuehren() {
           </div>
         </div>
 
-        <AdSenseBanner slot="3000000002" className="bg-white" />
 
         {/* Versteckte Kosten */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">

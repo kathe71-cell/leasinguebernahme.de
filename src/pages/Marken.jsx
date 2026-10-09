@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Car, Building2, ChevronRight, ArrowRight } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function Marken() {
@@ -51,7 +50,6 @@ export default function Marken() {
           </p>
         </div>
 
-        <AdSenseBanner slot="7000000001" className="bg-white" />
 
         {/* Brand Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -80,7 +78,6 @@ export default function Marken() {
           ))}
         </div>
 
-        <AdSenseBanner slot="7000000002" className="bg-white" />
 
       </div>
     </div>

@@ -13,6 +13,7 @@ const locMatches = [...sitemapContent.matchAll(/<loc>https:\/\/www\.xn--leasingb
 const sitemapRoutes = locMatches.map(m => m[1] || '/');
 
 const routes = Array.from(new Set([
+  '/projektuebernahme',
   '/',
   ...sitemapRoutes,
   '/rechner-embed'
@@ -191,7 +192,7 @@ for (const url of routes) {
     html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${meta.description}" />`);
     html = html.replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${meta.description}" />`);
 
-    const canonicalUrl = `https://www.xn--leasingbernahme-5vb.de${url === '/' ? '/' : url}`;
+    const canonicalUrl = `https://xn--leasingbernahme-5vb.de${url === '/' ? '/' : url}`;
     html = html.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
     html = html.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${canonicalUrl}" />`);
 

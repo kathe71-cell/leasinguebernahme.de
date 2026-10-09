@@ -1,3 +1,4 @@
+import ProjektuebernahmePage from "./pages/ProjektuebernahmePage.jsx";
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate, Outlet } from 'react-router-dom';
 import Layout from '@/pages/Layout';
@@ -11,6 +12,7 @@ import Marken from '@/pages/Marken';
 import Impressum from '@/pages/Impressum';
 import Datenschutz from '@/pages/Datenschutz';
 import VercelAnalytics from '@/components/VercelAnalytics';
+import ScrollToTop from '@/components/ScrollToTop';
 
 // Brand pages
 import MarkeAudi from '@/pages/MarkeAudi';
@@ -44,6 +46,14 @@ import ModellAudiA4 from '@/pages/ModellAudiA4';
 import RatgeberKuendigungVsUebernahme from '@/pages/RatgeberKuendigungVsUebernahme';
 import RatgeberPrivatGewerbe from '@/pages/RatgeberPrivatGewerbe';
 
+import RatgeberTrotzSchufa from '@/pages/RatgeberTrotzSchufa';
+import RatgeberElektroauto from '@/pages/RatgeberElektroauto';
+import RatgeberPraemie from '@/pages/RatgeberPraemie';
+import RatgeberRisiken from '@/pages/RatgeberRisiken';
+import RatgeberAboVsLeasing from '@/pages/RatgeberAboVsLeasing';
+import Glossar from '@/pages/Glossar';
+
+import NotFound from '@/pages/NotFound';
 import { Toaster } from '@/components/ui/toaster';
 
 function MainLayout() {
@@ -58,6 +68,7 @@ export function AppRoutes() {
   return (
     <>
       <VercelAnalytics />
+      <ScrollToTop />
       <Routes>
         {/* Rechner Embed (Clean Widget Route without website header/footer) */}
         <Route path="/rechner-embed" element={<RechnerEmbed />} />
@@ -87,10 +98,17 @@ export function AppRoutes() {
           <Route path="/audi-a4-leasinguebernahme" element={<ModellAudiA4 />} />
           <Route path="/a4-leasinguebernahme" element={<ModellAudiA4 />} />
 
-          {/* Transactional Problem Solver Guides */}
+          {/* Transactional Problem Solver Guides & Longtails */}
           <Route path="/leasingvertrag-vorzeitig-kuendigen" element={<RatgeberKuendigungVsUebernahme />} />
           <Route path="/kuendigung-vs-uebernahme" element={<RatgeberKuendigungVsUebernahme />} />
           <Route path="/leasinguebernahme-privat-an-gewerbe" element={<RatgeberPrivatGewerbe />} />
+          
+          <Route path="/leasinguebernahme-trotz-schufa" element={<RatgeberTrotzSchufa />} />
+          <Route path="/leasinguebernahme-elektroauto" element={<RatgeberElektroauto />} />
+          <Route path="/leasinguebernahme-praemie" element={<RatgeberPraemie />} />
+          <Route path="/leasinguebernahme-risiken" element={<RatgeberRisiken />} />
+          <Route path="/auto-abo-vs-leasinguebernahme" element={<RatgeberAboVsLeasing />} />
+          <Route path="/glossar" element={<Glossar />} />
           
           {/* Legal Pages */}
           <Route path="/impressum" element={<Impressum />} />
@@ -171,9 +189,10 @@ export function AppRoutes() {
           <Route path="/fahrzeugliste" element={<Navigate to="/" replace />} />
           <Route path="/inserat" element={<Navigate to="/" replace />} />
           <Route path="/admindashboard" element={<Navigate to="/" replace />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
-      </Routes>
+        <Route path="/projektuebernahme" element={<ProjektuebernahmePage />} />
+</Routes>
       <Toaster />
     </>
   );

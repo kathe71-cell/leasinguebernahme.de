@@ -73,20 +73,20 @@ export default function Datenschutz() {
           </CardContent>
         </Card>
 
-        {/* 4. Google AdSense & Werbeanzeigen */}
+        {/* 4. Einbindung von Affiliate-Rechnern (Tarifcheck) */}
         <Card className="bg-white border-slate-200 shadow-sm hover:shadow-md transition-shadow">
           <CardHeader className="border-b border-slate-100 bg-slate-50/50 py-4">
             <CardTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <Eye className="w-5 h-5 text-amber-600" />
-              4. Einbindung von Werbeanzeigen (Google AdSense)
+              4. Einbindung von Kfz-Versicherungsrechnern
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-6 space-y-3 text-slate-700 text-sm leading-relaxed">
             <p>
-              Auf dieser Website sind Skripte des Kartendienstes bzw. Werbedienstes Google AdSense der Google Ireland Limited („Google“), Gordon House, Barrow Street, Dublin 4, Irland eingebunden. Google AdSense nutzt Cookies und ähnliche Technologien zur Bereitstellung, Messung und Optimierung von Werbeanzeigen.
+              Auf dieser Website ist ein Tarifrechner für Kfz-Versicherungen der TARIFCHECK24 GmbH (Zollstr. 11b, 21465 Wentorf bei Hamburg) eingebunden. Bei der Nutzung des Rechners wird eine direkte Verbindung zu den Servern von Tarifcheck aufgebaut, wobei Ihre IP-Adresse und ggf. Browsereinstellungen übertragen werden. Tarifcheck setzt Cookies ein, um die Affiliate-Zuordnung und die Funktionalität des Rechners zu gewährleisten.
             </p>
             <p>
-              Die Datenverarbeitung erfolgt auf Grundlage Ihrer freiwilligen Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO. Sie können Ihre Cookie-Einwilligung jederzeit über den Link „Cookie-Einstellungen“ im Footer unserer Website anpassen oder widerrufen.
+              Die Datenverarbeitung erfolgt auf Grundlage unseres berechtigten Interesses (Art. 6 Abs. 1 lit. f DSGVO) an der Bereitstellung attraktiver Vergleichsangebote zur Refinanzierung dieses redaktionellen Angebots.
             </p>
           </CardContent>
         </Card>

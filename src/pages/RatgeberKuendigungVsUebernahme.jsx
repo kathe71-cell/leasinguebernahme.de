@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Scale, AlertTriangle, CheckCircle2, ChevronRight, DollarSign, Calculator } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberKuendigungVsUebernahme() {
@@ -43,7 +42,6 @@ export default function RatgeberKuendigungVsUebernahme() {
           </p>
         </div>
 
-        <AdSenseBanner slot="9000000009" className="bg-white" />
 
         {/* Vergleichstabelle */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
@@ -65,7 +63,7 @@ export default function RatgeberKuendigungVsUebernahme() {
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Kostenaufwand</td>
                   <td className="p-3.5 text-red-700 font-bold">3.000 € bis 10.000 €+</td>
-                  <td className="p-3.5 text-emerald-700 font-bold">Beim Leasinggeber zu erfragen</td>
+                  <td className="p-3.5 text-emerald-700 font-bold">Sehr gering (ca. 250 € - 500 €*)</td>
                 </tr>
                 <tr>
                   <td className="p-3.5 font-bold bg-slate-50">Zustimmung der Bank</td>
@@ -92,7 +90,6 @@ export default function RatgeberKuendigungVsUebernahme() {
           </div>
         </div>
 
-        <AdSenseBanner slot="9000000010" className="bg-white" />
 
         {/* CTA */}
         <div className="bg-amber-500 text-slate-950 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">

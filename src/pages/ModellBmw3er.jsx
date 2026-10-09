@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Calculator, CheckCircle2, ChevronRight, Car, Info } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function ModellBmw3er() {
@@ -45,7 +44,6 @@ export default function ModellBmw3er() {
           </p>
         </div>
 
-        <AdSenseBanner slot="9000000003" className="bg-white" />
 
         {/* Modell-Tabelle */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
@@ -68,19 +66,19 @@ export default function ModellBmw3er() {
                   <td className="p-3 font-bold bg-slate-50">BMW 320d Touring (G21)</td>
                   <td className="p-3">540 € – 680 €</td>
                   <td className="p-3 font-bold text-emerald-700">380 € – 490 €</td>
-                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3 font-semibold"><a href="https://www.bmwbank.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">BMW 330e Plug-in-Hybrid</td>
                   <td className="p-3">590 € – 720 €</td>
                   <td className="p-3 font-bold text-emerald-700">420 € – 530 €</td>
-                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3 font-semibold"><a href="https://www.bmwbank.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">BMW M340i xDrive</td>
                   <td className="p-3">780 € – 990 €</td>
                   <td className="p-3 font-bold text-emerald-700">590 € – 750 €</td>
-                  <td className="p-3 font-semibold text-slate-900">Beim Leasinggeber erfragen</td>
+                  <td className="p-3 font-semibold"><a href="https://www.bmwbank.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">Beim Anbieter erfragen*</a></td>
                 </tr>
               </tbody>
             </table>
@@ -100,7 +98,6 @@ export default function ModellBmw3er() {
           </ul>
         </div>
 
-        <AdSenseBanner slot="9000000004" className="bg-white" />
 
         <div className="bg-amber-500 text-slate-950 p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>

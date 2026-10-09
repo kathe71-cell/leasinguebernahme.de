@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Zap, CheckCircle2, ChevronRight, Car, Info } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function ModellTeslaModelY() {
@@ -45,7 +44,6 @@ export default function ModellTeslaModelY() {
           </p>
         </div>
 
-        <AdSenseBanner slot="9000000005" className="bg-white" />
 
         {/* Besonderheiten E-Auto Box */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
@@ -80,13 +78,12 @@ export default function ModellTeslaModelY() {
             Tesla nutzt in Deutschland verschiedene Partnergesellschaften für Leasingverträge. Prüfen Sie Ihren Leasingvertrag auf den exakten Vertragspartner:
           </p>
           <ul className="list-disc list-inside space-y-1.5 text-xs sm:text-sm text-slate-700 font-medium">
-            <li><strong>Santander Consumer Bank AG:</strong> Betreut einen Großteil der Privatleasingverträge (Umschreibungsgebühr beim Leasinggeber zu erfragen).</li>
-            <li><strong>CA Auto Bank (ehem. FCA Bank):</strong> Häufig bei neueren Modelljahren (Umschreibungsgebühr beim Leasinggeber zu erfragen).</li>
+            <li><strong>Santander Consumer Bank AG:</strong> Betreut einen Großteil der Privatleasingverträge (Umschreibungsgebühr ca. 250 € - 500 €).</li>
+            <li><strong>CA Auto Bank (ehem. FCA Bank):</strong> Häufig bei neueren Modelljahren (Umschreibungsgebühr ca. 250 € - 500 €).</li>
             <li><strong>Tesla Financial Services Deutschland:</strong> Für gewerbliche Flotten und ausgewählte Privatverträge.</li>
           </ul>
         </div>
 
-        <AdSenseBanner slot="9000000006" className="bg-white" />
 
         <div className="bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Car, CheckCircle2, ChevronRight } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function ModellAudiA4() {
@@ -41,14 +40,13 @@ export default function ModellAudiA4() {
             Wichtiger Hinweis &amp; Definition: Audi A4 Leasingübernahme
           </span>
           <p className="font-medium">
-            Die Audi A4 Leasingübernahme ermöglicht die vorzeitige Abgabe oder Übernahme eines Audi A4. Die Abwicklung erfolgt über die Audi Leasing (VWFS), richtet sich bezüglich der erforderlichen Restlaufzeit nach den jeweiligen Vertragsbedingungen und setzt die beim Leasinggeber zu erfragende Umschreibungsgebühr voraus.
+            Die Audi A4 Leasingübernahme ermöglicht die vorzeitige Abgabe oder Übernahme eines Audi A4. Die Abwicklung erfolgt über die Audi Leasing (VWFS), richtet sich bezüglich der erforderlichen Restlaufzeit nach den jeweiligen Vertragsbedingungen und setzt die ca. 250 € - 500 €de Umschreibungsgebühr voraus.
           </p>
           <div className="bg-rose-100/80 p-2.5 rounded-lg text-xs text-rose-950 font-semibold border border-rose-200">
             <strong>VWFS-Regelung:</strong> Übernahmen über Audi Leasing (VWFS) sind laut offizieller Erklärung auf <strong>Privatpersonen ausgeschlossen</strong> und finden vorrangig im gewerblichen Bereich statt.
           </div>
         </div>
 
-        <AdSenseBanner slot="9000000007" className="bg-white" />
 
         {/* Content Box */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
@@ -63,7 +61,6 @@ export default function ModellAudiA4() {
           </ul>
         </div>
 
-        <AdSenseBanner slot="9000000008" className="bg-white" />
 
         <div className="bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">

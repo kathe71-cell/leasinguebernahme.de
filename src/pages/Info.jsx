@@ -12,7 +12,6 @@ import {
   ArrowRight,
   HelpCircle
 } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function Info() {
@@ -38,11 +37,20 @@ export default function Info() {
           </p>
         </div>
 
-        {/* AdSense Top */}
-        <AdSenseBanner slot="2000000001" className="bg-white" />
+        {/* Inhaltsverzeichnis */}
+        <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-sm">
+          <h2 className="font-bold text-slate-900 mb-3 text-sm uppercase tracking-wider">Inhaltsverzeichnis</h2>
+          <ul className="space-y-2 text-sm text-emerald-600 font-semibold">
+            <li><a href="#schritt-1" className="hover:underline">Schritt 1: Vertrag finden & Rahmendaten prüfen</a></li>
+            <li><a href="#schritt-2" className="hover:underline">Schritt 2: Die Bonitätsprüfung (Schufa)</a></li>
+            <li><a href="#schritt-3" className="hover:underline">Schritt 3: Vertragliche Umschreibung (Bankvertrag)</a></li>
+            <li><a href="#schritt-4" className="hover:underline">Schritt 4: Fahrzeug-Übergabe und Ummeldung</a></li>
+          </ul>
+        </div>
+
 
         {/* Step 1 */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div id="schritt-1" className="scroll-mt-20 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 bg-amber-500 text-slate-950 font-extrabold text-lg rounded-xl flex items-center justify-center shadow">
               1
@@ -65,7 +73,7 @@ export default function Info() {
         </div>
 
         {/* Step 2 */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div  className="scroll-mt-20 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 bg-amber-500 text-slate-950 font-extrabold text-lg rounded-xl flex items-center justify-center shadow">
               2
@@ -101,11 +109,9 @@ export default function Info() {
           </div>
         </div>
 
-        {/* AdSense Mid */}
-        <AdSenseBanner slot="2000000002" className="bg-white" />
 
         {/* Step 3 */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div  className="scroll-mt-20 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 bg-amber-500 text-slate-950 font-extrabold text-lg rounded-xl flex items-center justify-center shadow">
               3
@@ -125,7 +131,7 @@ export default function Info() {
         </div>
 
         {/* Step 4 */}
-        <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+        <div id="schritt-4" className="scroll-mt-20 bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <span className="w-10 h-10 bg-amber-500 text-slate-950 font-extrabold text-lg rounded-xl flex items-center justify-center shadow">
               4

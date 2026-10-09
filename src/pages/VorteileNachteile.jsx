@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Check, X, ShieldCheck, Scale, ArrowRight } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function VorteileNachteile() {
@@ -27,7 +26,6 @@ export default function VorteileNachteile() {
           </p>
         </div>
 
-        <AdSenseBanner slot="4000000001" className="bg-white" />
 
         {/* Matrix Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,7 +65,7 @@ export default function VorteileNachteile() {
             <ul className="space-y-3 text-xs sm:text-sm text-slate-700">
               <li className="flex items-start gap-2">
                 <X className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                <span><strong>Umschreibungsgebühren:</strong> Einmalige Bankgebühr (beim jeweiligen Leasinggeber für den konkreten Vertrag zu erfragen) fällt an.</span>
+                <span><strong>Umschreibungsgebühren:</strong> Einmalige Bankgebühr (ca. 250 € - 500 €) fällt an.</span>
               </li>
               <li className="flex items-start gap-2">
                 <X className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />

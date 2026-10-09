@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Sparkles, ArrowRight, Clock, ChevronRight, DollarSign, ShieldCheck, Calculator, Building2, FileText } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
+import { Sparkles, ArrowRight, Clock, ChevronRight, Euro, ShieldCheck, Calculator, Building2, FileText, ExternalLink } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
+import KfzRechner from "@/components/KfzRechner";
 
 export default function Index() {
   // Rechner State
@@ -40,12 +40,7 @@ export default function Index() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto space-y-6">
             
-            <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/30 text-amber-400 font-extrabold text-xs px-4 py-1.5 rounded-full uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" />
-              <span>Das unabhängige Informationsportal &amp; Ratgeber</span>
-            </div>
-
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white mt-4">
               Leasingübernahme in Deutschland: Der große Leitfaden
             </h1>
 
@@ -91,7 +86,6 @@ export default function Index() {
 
       {/* ADSENSE BANNER TOP */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSenseBanner slot="1000000001" className="bg-white" />
       </div>
 
       {/* SCHNELEINSTIEG THEMEN */}
@@ -130,7 +124,7 @@ export default function Index() {
             <div className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-all group-hover:border-amber-400 h-full flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="w-12 h-12 bg-amber-100 text-amber-950 border border-amber-300 rounded-xl flex items-center justify-center font-extrabold">
-                  <DollarSign className="w-6 h-6 text-amber-700" />
+                  <Euro className="w-6 h-6 text-amber-700" />
                 </div>
                 <h3 className="text-xl font-extrabold text-slate-900 group-hover:text-amber-600 transition-colors">
                   Umschreibungsgebühren &amp; Kosten
@@ -370,7 +364,6 @@ export default function Index() {
 
       {/* ADSENSE BANNER MID */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSenseBanner slot="1000000002" className="bg-white" />
       </div>
 
       {/* VERGLEICHSTABELLE LEASINGÜBERNAHME VS NEUWAGEN VS ABO */}
@@ -423,12 +416,31 @@ export default function Index() {
                 </tr>
                 <tr>
                   <td className="p-4 font-bold bg-slate-50">Einmalgebühr Umschreibung</td>
-                  <td className="p-4 text-slate-700">Beim Leasinggeber zu erfragen</td>
+                  <td className="p-4 text-slate-700">ca. 250 € - 500 €*</td>
                   <td className="p-4 text-slate-600">Überführungskosten (800–1.200 €)</td>
                   <td className="p-4 text-slate-600">Keine oder Startpaket</td>
                 </tr>
               </tbody>
             </table>
+          </div>
+        </div>
+      </section>
+
+      {/* KFZ-VERSICHERUNG RECHNER (AFFILIATE) */}
+      <section className="py-16 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center space-y-2">
+            <span className="text-xs font-extrabold text-amber-600 uppercase tracking-widest">Wichtig bei der Umschreibung</span>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Neue EVB-Nummer &amp; KFZ-Versicherung
+            </h2>
+            <p className="text-slate-600 text-sm">
+              Für die Ummeldung auf Sie als neuen Leasingnehmer benötigen Sie zwingend eine neue elektronische Versicherungsbestätigung (EVB-Nummer). Vergleichen Sie hier kostenlos die besten Tarife für Ihr neues Leasingfahrzeug.
+            </p>
+          </div>
+          
+          <div className="bg-white p-2 sm:p-4 rounded-2xl shadow-sm border border-slate-200">
+            <KfzRechner />
           </div>
         </div>
       </section>
@@ -444,55 +456,119 @@ export default function Index() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               name: "Volkswagen Financial Services (VWFS)",
               brands: "VW, Audi, SEAT, CUPRA, Škoda",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "WICHTIGER HINWEIS: Laut offizieller Erklärung der VWFS ist die Leasingübernahme auf Privatpersonen derzeit ausgeschlossen. Übertragungen sind vorrangig im gewerblichen Bereich (Gewerbe-zu-Gewerbe) oder nach individueller Prüfung möglich."
+              fee: "ca. 250 € – 500 €*",
+              rule: "WICHTIGER HINWEIS: Laut offizieller Erklärung der VWFS ist die Leasingübernahme auf Privatpersonen derzeit ausgeschlossen. Übertragungen sind vorrangig im gewerblichen Bereich (Gewerbe-zu-Gewerbe) oder nach individueller Prüfung möglich.",
+              link: "https://www.vwfs.de/"
             },
             {
               name: "BMW Bank",
               brands: "BMW, MINI",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "Standardisierter Antrag. Übernahme unter Vorbehalt positiver Bonitätsprüfung möglich."
+              fee: "ca. 250 € – 500 €*",
+              rule: "Standardisierter Antrag. Übernahme unter Vorbehalt positiver Bonitätsprüfung möglich.",
+              link: "https://www.bmwbank.de/"
             },
             {
               name: "Mercedes-Benz Bank",
               brands: "Mercedes-Benz, Smart",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "Umschreibung erfordert vollständige Selbstauskunft & Einkommensnachweise des Nachfolgers."
+              fee: "ca. 250 € – 500 €*",
+              rule: "Umschreibung erfordert vollständige Selbstauskunft & Einkommensnachweise des Nachfolgers.",
+              link: "https://www.mercedes-benz-bank.de/"
             },
             {
               name: "Santander Consumer Bank",
               brands: "Multimarken",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "Übertragungsbedingungen für Privat- und Geschäftskunden nach Bankprüfung."
+              fee: "ca. 250 € – 500 €*",
+              rule: "Übertragungsbedingungen für Privat- und Geschäftskunden nach Bankprüfung.",
+              link: "https://www.santander.de/"
             },
             {
               name: "Stellantis Financial Services",
-              brands: "Opel, Peugeot, Citroën, Fiat",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "Vertragsübertragung muss beim zuständigen Vertragshändler beantragt werden."
+              brands: "Opel, Peugeot, Citroën, Fiat, Jeep",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Vertragsübertragung muss beim zuständigen Vertragshändler beantragt werden.",
+              link: "https://www.stellantis-financial-services.de/"
             },
             {
-              name: "Tesla Financial Services / CA Auto Bank",
+              name: "Mobilize Financial Services",
+              brands: "Renault, Dacia, Nissan",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Übernahmeantrag wird in der Regel direkt über den betreuenden Händler eingesteuert.",
+              link: "https://www.mobilize-fs.de/"
+            },
+            {
+              name: "Ford Bank",
+              brands: "Ford",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Bonitätsprüfung zwingend erforderlich. Einreichung der Unterlagen meist via Händler.",
+              link: "https://www.ford.de/"
+            },
+            {
+              name: "Toyota Kreditbank",
+              brands: "Toyota, Lexus",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Vertragsübertragungen werden fallweise geprüft. Händler ist erster Ansprechpartner.",
+              link: "https://www.toyota.de/angebote-finanzierung/angebote-aktionen"
+            },
+            {
+              name: "Tesla Financial Services",
               brands: "Tesla Model 3, Y, S, X",
-              fee: "Beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen",
-              rule: "Abwicklung über den zuständigen Leasing- beziehungsweise Finanzierungspartner."
+              fee: "ca. 250 € – 500 €*",
+              rule: "Abwicklung über den zuständigen Leasing- beziehungsweise Finanzierungspartner.",
+              link: "https://www.tesla.com/de_de/support/financial-services"
+            },
+            {
+              name: "Porsche Financial Services",
+              brands: "Porsche",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Exklusive Prüfung der Bonität des Nachfolgers. Individuelle Abstimmung erforderlich.",
+              link: "https://www.porsche.com/germany/accessoriesandservices/porschefinancialservices/"
+            },
+            {
+              name: "Ayvens (ehem. ALD / LeasePlan)",
+              brands: "Multimarken (Gewerbe & Privat)",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Markenübergreifende Flotten-Leasinggesellschaft. Umschreibung nach Bonitätsprüfung.",
+              link: "https://www.ayvens.com/de-de/"
+            },
+            {
+              name: "Arval",
+              brands: "Multimarken",
+              fee: "ca. 250 € – 500 €*",
+              rule: "Großer Full-Service-Leasing Anbieter. Übernahmen oft auf Geschäftskunden beschränkt.",
+              link: "https://www.arval.de/"
             }
           ].map((bank, i) => (
-            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-3">
-              <div className="flex items-center gap-2">
-                <Building2 className="w-5 h-5 text-amber-600 flex-shrink-0" />
-                <h3 className="font-extrabold text-slate-900 text-base">{bank.name}</h3>
+            <div key={i} className="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center gap-2">
+                  <Building2 className="w-5 h-5 text-amber-600 flex-shrink-0" />
+                  <h3 className="font-extrabold text-slate-900 text-base">{bank.name}</h3>
+                </div>
+                <p className="text-xs text-slate-500 font-semibold">Marken: {bank.brands}</p>
+                <div className="text-xs space-y-1 text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
+                  <p>
+                    Umschreibungsgebühr:{' '}
+                    <a href={bank.link} target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:text-amber-700 font-bold hover:underline">
+                      Beim Anbieter erfragen*
+                    </a>
+                  </p>
+                  <p className="text-slate-600 text-[11px] pt-1">{bank.rule}</p>
+                </div>
               </div>
-              <p className="text-xs text-slate-500 font-semibold">Marken: {bank.brands}</p>
-              <div className="text-xs space-y-1 text-slate-700 bg-slate-50 p-3 rounded-xl border border-slate-100">
-                <p>Umschreibungsgebühr: <strong className="text-slate-900">{bank.fee}</strong></p>
-                <p className="text-slate-600 text-[11px] pt-1">{bank.rule}</p>
-              </div>
+              <a 
+                href={bank.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-bold text-amber-600 hover:text-amber-500 transition-colors"
+              >
+                Offizielle Webseite
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           ))}
         </div>
@@ -503,7 +579,7 @@ export default function Index() {
             <span>Transparenzhinweis zu Umschreibungsgebühren:</span>
           </strong>
           <p className="leading-relaxed">
-            Die Umschreibungsgebühren und Bedingungen variieren je nach Leasinggesellschaft, Kundengruppe (Privat- oder Gewerbekunde) und Ausgestaltung des Ursprungsvertrags. Die Umschreibungsgebühr bitte beim jeweiligen Leasinggeber für den konkreten Vertrag erfragen.
+            Die Umschreibungsgebühren und Bedingungen variieren je nach Leasinggesellschaft, Kundengruppe (Privat- oder Gewerbekunde) und Ausgestaltung des Ursprungsvertrags. Die Gebühr beträgt erfahrungsgemäß ca. 250 € - 500 €.
           </p>
           <div className="pt-1">
             <Link to="/kosten-gebuehren" className="inline-flex items-center gap-1.5 text-amber-700 font-bold hover:text-amber-800 underline text-xs">
@@ -635,32 +711,8 @@ export default function Index() {
         </div>
       </section>
 
-      {/* EDITORIAL & QUALITY ASSURANCE BOX */}
-      <section className="py-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-100/90 rounded-2xl border border-slate-200 p-6 flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-          <div className="w-14 h-14 rounded-full bg-amber-500 text-slate-950 font-extrabold flex items-center justify-center text-xl shrink-0 shadow">
-            JK
-          </div>
-          <div className="space-y-1 flex-1 text-xs text-slate-600">
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-              <strong className="text-slate-900 font-bold text-sm">Fachredaktion Leasingübernahme.de</strong>
-              <span className="px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-950 border border-amber-300 font-extrabold text-[10px]">
-                Fachratgeber Mobilität &amp; Vertragsrecht
-              </span>
-            </div>
-            <p className="leading-relaxed">
-              Dieser Ratgeber wurde von unserer Fachredaktion für Mobilität und Vertragsrecht (§§ 414, 415 BGB) zusammengestellt. Alle Angaben zu Bankgebühren und Umschreibungsprozessen basieren auf öffentlich zugänglichen Informationen der Leasinganbieter und dienen der allgemeinen Orientierung.
-            </p>
-            <div className="pt-1 flex flex-wrap justify-center sm:justify-start gap-4 text-[11px] text-slate-500 font-semibold">
-              <span>Rechtsquellen: BGB, Preis- &amp; Leistungsverzeichnisse der Leasingbanken</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ADSENSE BANNER FOOTER */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AdSenseBanner slot="1000000003" className="bg-white" />
       </div>
 
     </div>

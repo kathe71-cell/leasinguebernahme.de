@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { HelpCircle, ChevronDown, ChevronUp, Search, BookOpen } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function FAQ() {
@@ -21,7 +20,7 @@ export default function FAQ() {
     },
     {
       q: "Welche Gebühren fallen bei einer Vertragsübernahme an?",
-      a: "Die Leasinggesellschaften erheben eine Bearbeitungs- und Umschreibungsgebühr. Die genaue Umschreibungsgebühr ist bitte beim jeweiligen Leasinggeber für den konkreten Vertrag zu erfragen, da sie vom Leasinganbieter je nach Kundengruppe und Vertragsmodell individuell festgelegt wird. Oft vereinbaren Alt- und Neu-Leasingnehmer, diese Kosten zu teilen."
+      a: "Die Leasinggesellschaften erheben eine Bearbeitungs- und Umschreibungsgebühr. Die Gebühr beträgt erfahrungsgemäß ca. 250 € - 500 €, da sie vom Leasinganbieter je nach Kundengruppe und Vertragsmodell individuell festgelegt wird. Oft vereinbaren Alt- und Neu-Leasingnehmer, diese Kosten zu teilen."
     },
     {
       q: "Wer haftet für Kratzer oder Schäden bei der Fahrzeugrückgabe?",
@@ -71,7 +70,6 @@ export default function FAQ() {
           </p>
         </div>
 
-        <AdSenseBanner slot="6000000001" className="bg-white" />
 
         {/* FAQ Accordion List */}
         <div className="space-y-4">
@@ -102,7 +100,6 @@ export default function FAQ() {
           ))}
         </div>
 
-        <AdSenseBanner slot="6000000002" className="bg-white" />
 
       </div>
     </div>

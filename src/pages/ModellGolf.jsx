@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, ShieldCheck, Calculator, CheckCircle2, ChevronRight, Car, Info, Award } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function ModellGolf() {
@@ -41,14 +40,13 @@ export default function ModellGolf() {
             Wichtiger Hinweis &amp; Definition: VW Golf Leasingübernahme
           </span>
           <p className="font-medium">
-            Die VW Golf Leasingübernahme ermöglicht den Eintritt in einen bestehenden Vertrag für einen VW Golf 8 zu vereinbarten Konditionen. Die Umschreibung bedarf der Genehmigung der Volkswagen Bank (VWFS); die Gebühr ist beim Leasinggeber für den konkreten Vertrag zu erfragen.
+            Die VW Golf Leasingübernahme ermöglicht den Eintritt in einen bestehenden Vertrag für einen VW Golf 8 zu vereinbarten Konditionen. Die Umschreibung bedarf der Genehmigung der Volkswagen Bank (VWFS); die Gebühr beträgt ca. 250 € - 500 €.
           </p>
           <div className="bg-rose-100/80 p-2.5 rounded-lg text-xs text-rose-950 font-semibold border border-rose-200">
             <strong>Einschränkung der VWFS:</strong> Laut offizieller Erklärung der Volkswagen Financial Services sind Vertragsübernahmen auf <strong>Privatpersonen ausgeschlossen</strong> (vorrangig Gewerbe-zu-Gewerbe).
           </div>
         </div>
 
-        <AdSenseBanner slot="9000000001" className="bg-white" />
 
         {/* Modell-Eckdaten Tabelle */}
         <div className="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-sm space-y-4">
@@ -75,25 +73,25 @@ export default function ModellGolf() {
                   <td className="p-3 font-bold bg-slate-50">Golf 8 1.5 TSI / eTSI</td>
                   <td className="p-3">280 € – 360 €</td>
                   <td className="p-3 font-bold text-emerald-700">199 € – 260 €</td>
-                  <td className="p-3">VWFS</td>
+                  <td className="p-3"><a href="https://www.vwfs.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">VWFS</a></td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">Golf 8 2.0 TDI (Langstrecke)</td>
                   <td className="p-3">330 € – 420 €</td>
                   <td className="p-3 font-bold text-emerald-700">240 € – 310 €</td>
-                  <td className="p-3">VWFS</td>
+                  <td className="p-3"><a href="https://www.vwfs.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">VWFS</a></td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">Golf 8 GTI / Clubsport</td>
                   <td className="p-3">420 € – 550 €</td>
                   <td className="p-3 font-bold text-emerald-700">310 € – 420 €</td>
-                  <td className="p-3">VWFS</td>
+                  <td className="p-3"><a href="https://www.vwfs.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">VWFS</a></td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold bg-slate-50">Golf 8 GTE (Plug-in-Hybrid)</td>
                   <td className="p-3">380 € – 480 €</td>
                   <td className="p-3 font-bold text-emerald-700">270 € – 350 €</td>
-                  <td className="p-3">VWFS</td>
+                  <td className="p-3"><a href="https://www.vwfs.de/" target="_blank" rel="noopener noreferrer nofollow" className="text-amber-600 hover:underline font-bold">VWFS</a></td>
                 </tr>
               </tbody>
             </table>
@@ -118,7 +116,6 @@ export default function ModellGolf() {
           </ol>
         </div>
 
-        <AdSenseBanner slot="9000000002" className="bg-white" />
 
         {/* Cross-Navigation */}
         <div className="bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">

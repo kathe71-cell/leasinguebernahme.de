@@ -1,6 +1,5 @@
 import React from "react";
 import { FileText, CheckSquare, Printer, ShieldCheck, Download } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function Checkliste() {
@@ -31,16 +30,25 @@ export default function Checkliste() {
               Verwenden Sie dieses kostenlose Muster-Protokoll bei der Fahrzeugübergabe, um den Fahrzeugzustand, Kilometerstand und bestehende Vorschäden strukturiert zu dokumentieren.
             </p>
           </div>
-          <button 
-            onClick={handlePrint}
-            className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs py-2.5 px-4 rounded-xl shadow flex items-center gap-2 print:hidden"
-          >
-            <Printer className="w-4 h-4" />
-            <span>Protokoll drucken</span>
-          </button>
+          <div className="flex gap-3">
+            <a 
+              href="/uebergabeprotokoll.pdf"
+              download="uebergabeprotokoll.pdf"
+              className="bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs py-2.5 px-4 rounded-xl shadow flex items-center gap-2 print:hidden"
+            >
+              <Download className="w-4 h-4" />
+              <span>Als PDF laden</span>
+            </a>
+            <button 
+              onClick={handlePrint}
+              className="bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-xs py-2.5 px-4 rounded-xl shadow flex items-center gap-2 print:hidden"
+            >
+              <Printer className="w-4 h-4" />
+              <span>Protokoll drucken</span>
+            </button>
+          </div>
         </div>
 
-        <AdSenseBanner slot="5000000001" className="bg-white print:hidden" />
 
         {/* Print Content Card */}
         <div className="bg-white p-6 sm:p-10 rounded-2xl border border-slate-200 shadow-sm space-y-6 print:border-none print:shadow-none">

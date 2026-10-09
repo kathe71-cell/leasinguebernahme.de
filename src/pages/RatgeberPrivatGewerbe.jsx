@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Building2, FileText, CheckCircle2, ChevronRight, DollarSign } from "lucide-react";
-import AdSenseBanner from "@/components/AdSenseBanner";
 import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberPrivatGewerbe() {
@@ -46,7 +45,6 @@ export default function RatgeberPrivatGewerbe() {
           </p>
         </div>
 
-        <AdSenseBanner slot="9000000011" className="bg-white" />
 
         {/* Boxen */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -77,7 +75,6 @@ export default function RatgeberPrivatGewerbe() {
           </div>
         </div>
 
-        <AdSenseBanner slot="9000000012" className="bg-white" />
 
         <div className="bg-slate-900 text-white p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="space-y-1 text-center sm:text-left">
