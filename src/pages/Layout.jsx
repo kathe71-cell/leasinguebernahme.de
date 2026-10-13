@@ -7,7 +7,6 @@ import {
   ChevronRight, 
   FileText,
   Clock,
-  DollarSign,
   ShieldCheck,
   CheckSquare,
   Car

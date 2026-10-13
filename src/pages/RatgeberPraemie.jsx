@@ -1,6 +1,6 @@
 import React from "react";
 import SEOHead from "@/components/SEOHead";
-import { DollarSign, CheckCircle2, Calculator, AlertTriangle, ArrowRight } from "lucide-react";
+import { Euro, CheckCircle2, Calculator, AlertTriangle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function RatgeberPraemie() {
@@ -25,7 +25,7 @@ export default function RatgeberPraemie() {
         {/* Gründe für Prämie */}
         <div className="bg-white border border-slate-200 p-6 sm:p-8 rounded-2xl shadow-sm space-y-6">
           <h2 className="text-2xl font-bold text-slate-900 flex items-center gap-2 border-b border-slate-100 pb-4">
-            <DollarSign className="w-6 h-6 text-emerald-600" />
+            <Euro className="w-6 h-6 text-emerald-600" />
             Wann ist eine Prämie gerechtfertigt?
           </h2>
           <div className="space-y-4">

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Building2, FileText, CheckCircle2, ChevronRight, DollarSign } from "lucide-react";
+import { Building2, FileText, CheckCircle2, ChevronRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberPrivatGewerbe() {

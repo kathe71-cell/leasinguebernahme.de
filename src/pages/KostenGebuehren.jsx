@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { DollarSign, Building2, AlertTriangle, ShieldCheck, FileText, ArrowRight } from "lucide-react";
+import { Building2, AlertTriangle, ShieldCheck, FileText, ArrowRight } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 export default function KostenGebuehren() {

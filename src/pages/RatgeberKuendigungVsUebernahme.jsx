@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Scale, AlertTriangle, CheckCircle2, ChevronRight, DollarSign, Calculator } from "lucide-react";
+import { Scale, AlertTriangle, CheckCircle2, ChevronRight, Calculator } from "lucide-react";
 import SEOHead from "@/components/SEOHead";
 
 export default function RatgeberKuendigungVsUebernahme() {
